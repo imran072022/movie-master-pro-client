@@ -15,3 +15,26 @@ body {
   font-family: "Inter", sans-serif;
   background-color: black;
 }
+
+/*Key Frame*/
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/*Design for buttons*/
+.btn-gradient-animate {
+  background: linear-gradient(270deg, #d65aff, #ff5da1, #d351ff);
+  background-size: 200% 200%;
+  animation: gradient-x 10s linear infinite;
+}
+
+.animate-gradient-bg {
+  background-size: 200% 200%;
+  animation: gradient-bg 12s ease infinite;
+}

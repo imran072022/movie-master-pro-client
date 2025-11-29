@@ -59,6 +59,7 @@ const MovieCard = ({ _id, title, releaseYear, posterUrl, genre, rating }) => {
             hover:bg-gray-700 
             transition-colors duration-200
             cursor-pointer
+            text-center
           "
         >
           Details

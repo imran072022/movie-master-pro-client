@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import HeroCarousel from "../Components/HeroCarousel";
 import TopRated from "../Components/ForHome/TopRated";
 import MovieCard from "../Components/MovieCard";
+import AboutPlatform from "../Components/ForHome/AboutPlatform";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -24,6 +25,7 @@ const Home = () => {
           Top Rated Movies -
         </h2>
         <TopRated></TopRated>
+        <AboutPlatform></AboutPlatform>
       </section>
     </div>
   );

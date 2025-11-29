@@ -6,6 +6,8 @@ import AddMovies from "../Pages/AddMovies";
 import MyCollection from "../Pages/MyCollection";
 import MovieDetails from "../Pages/MovieDetails";
 import UpdateMovie from "../Pages/UpdateMovie";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
       {
         path: "movie/update/:id",
         Component: UpdateMovie,
+      },
+      {
+        path: "login",
+        Component: Login,
+      },
+      {
+        path: "register",
+        Component: Register,
       },
     ],
   },
