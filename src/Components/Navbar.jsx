@@ -11,8 +11,14 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", to: "/" },
     { name: "All Movies", to: "/movies" },
-    { name: "My Collection", to: "/movies/my-collection" },
   ];
+
+  const privateNavItems = user
+    ? [
+        { name: "My Collection", to: "/movies/my-collection" },
+        { name: "Add Movie", to: "/movies/add" },
+      ]
+    : [];
 
   return (
     <div className="bg-black text-white w-full z-50 shadow-lg">
@@ -24,10 +30,11 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
+          {[...navItems, ...privateNavItems].map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
+              end={item.to === "/movies"}
               className={({ isActive }) =>
                 `text-lg hover:text-cyan-400 transition ${
                   isActive ? "text-cyan-400" : ""
@@ -112,7 +119,7 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-gray-900 px-4 pb-4">
           <div className="flex flex-col gap-4">
-            {navItems.map((item) => (
+            {[...navItems, ...privateNavItems].map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}

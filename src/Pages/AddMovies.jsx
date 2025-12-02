@@ -1,7 +1,7 @@
 import React from "react";
 
 const AddMovies = () => {
-  return <div>add movies</div>;
+  return <div className="text-white">add movies</div>;
 };
 
 export default AddMovies;
