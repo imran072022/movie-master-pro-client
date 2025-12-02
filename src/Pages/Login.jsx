@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-
+import { AuthContext } from "../Providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const { login } = useContext(AuthContext);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    login(email, password)
+      .then((userCredential) => {
+        toast.success("Logged in successfully!");
+        console.log(userCredential.user);
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        console.log(error.message);
+      });
+  };
 
   return (
     <div
@@ -27,7 +42,7 @@ const Login = () => {
           Login
         </h2>
 
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleLogin}>
           {/* Email */}
           <div>
             <label className="block text-sm font-semibold text-gray-700">
@@ -36,8 +51,7 @@ const Login = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
               className="w-full px-4 py-2 mt-2 rounded-lg bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d351ff]"
             />
           </div>
@@ -50,6 +64,7 @@ const Login = () => {
             <input
               type="password"
               placeholder="Enter your password"
+              name="password"
               className="w-full px-4 py-2 mt-2 rounded-lg bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d351ff]"
             />
           </div>
@@ -60,10 +75,7 @@ const Login = () => {
           </p>
 
           {/* Login Button */}
-          <motion.button
-            type="button"
-            className="w-full text-white cursor-pointer py-2 rounded-lg font-bold btn-gradient-animate hover:brightness-110 transition-all"
-          >
+          <motion.button className="w-full text-white cursor-pointer py-2 rounded-lg font-bold btn-gradient-animate hover:brightness-110 transition-all">
             Login
           </motion.button>
 

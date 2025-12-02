@@ -1,13 +1,29 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-
+import { AuthContext } from "../Providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 const Register = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [photo, setPhoto] = useState("");
-  const [password, setPassword] = useState("");
+  const { signUp } = useContext(AuthContext);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const photo = e.target.photo.value;
+    const password = e.target.password.value;
+    console.log(name, email, photo, password);
+    signUp(email, password)
+      .then((userCredential) => {
+        toast.success("Registered successfully!");
+        console.log(userCredential.user);
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        console.log(error);
+      });
+  };
 
   return (
     <div
@@ -21,7 +37,7 @@ const Register = () => {
           Register
         </h2>
 
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleRegister}>
           {/* Name */}
           <div>
             <label className="block text-sm font-semibold text-gray-700">
@@ -30,8 +46,7 @@ const Register = () => {
             <input
               type="text"
               placeholder="Enter your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              name="name"
               className="w-full px-4 py-2 mt-2 rounded-lg bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d351ff]"
             />
           </div>
@@ -43,9 +58,8 @@ const Register = () => {
             </label>
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-2 mt-2 rounded-lg bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d351ff]"
             />
           </div>
@@ -57,9 +71,8 @@ const Register = () => {
             </label>
             <input
               type="text"
+              name="photo"
               placeholder="Enter photo URL"
-              value={photo}
-              onChange={(e) => setPhoto(e.target.value)}
               className="w-full px-4 py-2 mt-2 rounded-lg bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d351ff]"
             />
           </div>
@@ -71,18 +84,14 @@ const Register = () => {
             </label>
             <input
               type="password"
+              name="password"
               placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
               className="w-full px-4 py-2 mt-2 rounded-lg bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d351ff]"
             />
           </div>
 
           {/* Register Button */}
-          <motion.button
-            type="button"
-            className="w-full text-white cursor-pointer py-2 rounded-lg font-bold btn-gradient-animate hover:brightness-110 transition-all"
-          >
+          <motion.button className="w-full text-white cursor-pointer py-2 rounded-lg font-bold btn-gradient-animate hover:brightness-110 transition-all">
             Register
           </motion.button>
 
