@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router";

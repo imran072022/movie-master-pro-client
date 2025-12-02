@@ -56,12 +56,10 @@ const MovieDetails = () => {
                 <span className="font-semibold">Featured:</span>{" "}
                 <span
                   className={
-                    movie.featured === "true"
-                      ? "text-green-400"
-                      : "text-red-400"
+                    movie.featured === true ? "text-green-400" : "text-red-400"
                   }
                 >
-                  {movie.featured === "true" ? "Yes" : "No"}
+                  {movie.featured === true ? "Yes" : "No"}
                 </span>
               </p>
             </div>

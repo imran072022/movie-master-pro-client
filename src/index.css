@@ -33,7 +33,6 @@ body {
   background-size: 200% 200%;
   animation: gradient-x 10s linear infinite;
 }
-
 .animate-gradient-bg {
   background-size: 200% 200%;
   animation: gradient-bg 12s ease infinite;
