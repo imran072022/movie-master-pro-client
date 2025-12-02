@@ -8,6 +8,7 @@ import MovieDetails from "../Pages/MovieDetails";
 import UpdateMovie from "../Pages/UpdateMovie";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import PrivateRoute from "./PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,11 +28,19 @@ const router = createBrowserRouter([
       },
       {
         path: "movies/my-collection",
-        Component: MyCollection,
+        element: (
+          <PrivateRoute>
+            <MyCollection></MyCollection>
+          </PrivateRoute>
+        ),
       },
       {
         path: "movie/:id",
-        Component: MovieDetails,
+        element: (
+          <PrivateRoute>
+            <MovieDetails></MovieDetails>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:3000/movie/${params.id}`),
       },

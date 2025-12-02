@@ -1,16 +1,17 @@
 import React, { useContext, useState } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 import { Menu, X, UserCircle } from "lucide-react";
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
     { name: "Home", to: "/" },
     { name: "All Movies", to: "/movies" },
-    { name: "My Collection", to: "/my-collection" },
+    { name: "My Collection", to: "/movies/my-collection" },
   ];
 
   return (

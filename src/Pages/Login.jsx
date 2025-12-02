@@ -1,11 +1,14 @@
 import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 const Login = () => {
-  const { login } = useContext(AuthContext);
+  const { login, signInWithGoogle } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -13,11 +16,25 @@ const Login = () => {
     login(email, password)
       .then((userCredential) => {
         toast.success("Logged in successfully!");
+        navigate(location.state?.from || "/", { replace: true });
         console.log(userCredential.user);
       })
       .catch((error) => {
         toast.error(error.message);
         console.log(error.message);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((userCredential) => {
+        console.log(userCredential.user);
+        toast.success("Logged in successfully");
+        navigate(location.state?.from || "/", { replace: true });
+      })
+      .catch((error) => {
+        console.log(error.message);
+        toast.error(error.message);
       });
   };
 
@@ -80,19 +97,20 @@ const Login = () => {
           </motion.button>
 
           {/* Google Login Button */}
-          <button
-            type="button"
-            className="w-full py-2 bg-gray-100 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 font-bold hover:text-[#111A2B] transition flex items-center justify-center gap-2"
-          >
-            <FcGoogle className="w-6 h-6" /> Continue with Google
-          </button>
         </form>
+        <button
+          onClick={handleGoogleSignIn}
+          className="w-full py-2 bg-gray-100 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 font-bold hover:text-[#111A2B] transition flex items-center justify-center gap-2"
+        >
+          <FcGoogle className="w-6 h-6" /> Continue with Google
+        </button>
 
         {/* Register Link */}
         <p className="mt-4 text-center text-gray-700">
           Don't have an account?
           <Link
             to="/register"
+            state={location.state}
             className="text-[#d351ff] hover:text-[#ff5da1] hover:underline ml-1"
           >
             Register
