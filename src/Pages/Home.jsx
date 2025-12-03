@@ -3,6 +3,7 @@ import HeroCarousel from "../Components/HeroCarousel";
 import TopRated from "../Components/ForHome/TopRated";
 import MovieCard from "../Components/MovieCard";
 import AboutPlatform from "../Components/ForHome/AboutPlatform";
+import Statistics from "../Components/ForHome/Statistics";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -19,7 +20,12 @@ const Home = () => {
   return (
     <div>
       <HeroCarousel movies={movies}></HeroCarousel>
-      <div className="grid grid-cols-5 gap-7 mt-3.5 max-w-7xl mx-auto"></div>
+      <Statistics
+        totalMovies={movies?.length || 0}
+        totalUsers={
+          [...new Set(movies.map((movie) => movie.addedBy))]?.length || 0
+        }
+      />
       <section className="max-w-7xl mx-auto">
         <h2 className="roboto font-bold text-3xl text-white">
           Top Rated Movies -
