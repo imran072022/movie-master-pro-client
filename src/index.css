@@ -37,3 +37,25 @@ body {
   background-size: 200% 200%;
   animation: gradient-bg 12s ease infinite;
 }
+
+/*Genre Carousel custom styles */
+
+.swiper-button-prev,
+.swiper-button-next {
+  transform: translateY(-30%) !important;
+  height: 40px !important;
+  width: 30px !important;
+  background: rgba(0, 0, 0, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 12px !important;
+  height: 12px !important;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #ff006a !important;
+}

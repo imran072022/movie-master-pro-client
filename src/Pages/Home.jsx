@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import HeroCarousel from "../Components/HeroCarousel";
 import TopRated from "../Components/ForHome/TopRated";
-import MovieCard from "../Components/MovieCard";
 import AboutPlatform from "../Components/ForHome/AboutPlatform";
 import Statistics from "../Components/ForHome/Statistics";
 import RecentlyAdded from "../Components/ForHome/RecentlyAdded";
+import Genre from "../Components/ForHome/Genre";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -34,6 +34,7 @@ const Home = () => {
         <TopRated></TopRated>
         <h2 className="text-white text-3xl font-bold">Recently Added</h2>
         <RecentlyAdded></RecentlyAdded>
+        <Genre></Genre>
         <AboutPlatform></AboutPlatform>
       </section>
     </div>
