@@ -14,7 +14,7 @@ const AddMovie = () => {
       genre: form.genre.value,
       releaseYear: parseInt(form.releaseYear.value),
       director: form.director.value,
-      cast: form.cast.value.split(",").map((c) => c.trim("")),
+      cast: form.cast.value.split(",").map((c) => c.trim()),
       rating: parseFloat(form.rating.value),
       duration: parseInt(form.duration.value),
       plotSummary: form.plotSummary.value,
@@ -41,21 +41,16 @@ const AddMovie = () => {
   };
 
   const inputs = [
-    { name: "title", placeholder: "Movie Title", type: "text" },
-    { name: "genre", placeholder: "Genre (e.g., Action, Drama)", type: "text" },
-    { name: "releaseYear", placeholder: "Release Year", type: "number" },
-    { name: "director", placeholder: "Director", type: "text" },
-    { name: "cast", placeholder: "Cast (comma-separated)", type: "text" },
-    {
-      name: "rating",
-      placeholder: "Rating (0–10)",
-      type: "number",
-      step: "0.1",
-    },
-    { name: "duration", placeholder: "Duration (in minutes)", type: "number" },
-    { name: "posterUrl", placeholder: "Poster Image URL", type: "url" },
-    { name: "language", placeholder: "Language", type: "text" },
-    { name: "country", placeholder: "Country", type: "text" },
+    { name: "title", label: "Movie Title", type: "text" },
+    { name: "genre", label: "Genre (e.g., Action, Drama)", type: "text" },
+    { name: "releaseYear", label: "Release Year", type: "number" },
+    { name: "director", label: "Director", type: "text" },
+    { name: "cast", label: "Cast (comma-separated)", type: "text" },
+    { name: "rating", label: "Rating (0–10)", type: "number", step: "0.1" },
+    { name: "duration", label: "Duration (in minutes)", type: "number" },
+    { name: "posterUrl", label: "Poster Image URL", type: "url" },
+    { name: "language", label: "Language", type: "text" },
+    { name: "country", label: "Country", type: "text" },
   ];
 
   return (
@@ -82,40 +77,45 @@ const AddMovie = () => {
           Add New Movie
         </h2>
 
-        {/* Inputs */}
-
+        {/* Inputs with labels on top */}
         {inputs.map((input) => (
-          <motion.input
-            key={input.name}
-            type={input.type}
-            name={input.name}
-            placeholder={input.placeholder}
-            step={input.step}
-            required
-            animate={{ scale: 1 }}
-            whileFocus={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-            className="w-full p-3 rounded bg-[#222] border border-[#333] placeholder-[#aaa] text-[#eee] focus:border-[#d65aff] focus:shadow-[0_0_8px_#d65aff55] focus:outline-none mb-4"
-          />
+          <div key={input.name} className="mb-4">
+            <label className="block text-[#ccc] mb-1">{input.label}</label>
+            <motion.input
+              type={input.type}
+              name={input.name}
+              step={input.step}
+              required
+              animate={{ scale: 1 }}
+              whileFocus={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+              className="w-full p-3 rounded bg-[#222] border border-[#333] placeholder-[#aaa] text-[#eee] focus:border-[#d65aff] focus:shadow-[0_0_8px_#d65aff55] focus:outline-none"
+            />
+          </div>
         ))}
 
         {/* Plot summary */}
-        <textarea
-          name="plotSummary"
-          placeholder="Plot Summary"
-          required
-          rows={4}
-          className="w-full p-3 rounded bg-[#222] border border-[#333] placeholder-[#aaa] text-[#eee] focus:border-[#d65aff] focus:shadow-[0_0_8px_#d65aff55] focus:outline-none mb-4"
-        />
+        <div className="mb-4">
+          <label className="block text-[#ccc] mb-1">Plot Summary</label>
+          <textarea
+            name="plotSummary"
+            required
+            rows={4}
+            className="w-full p-3 rounded bg-[#222] border border-[#333] placeholder-[#aaa] text-[#eee] focus:border-[#d65aff] focus:shadow-[0_0_8px_#d65aff55] focus:outline-none"
+          />
+        </div>
 
         {/* Featured select */}
-        <select
-          name="featured"
-          className="w-full p-3 rounded bg-[#222] border border-[#333] text-[#eee] focus:border-[#d65aff] focus:shadow-[0_0_8px_#d65aff55] focus:outline-none mb-4"
-        >
-          <option value="true">Featured</option>
-          <option value="false">Not Featured</option>
-        </select>
+        <div className="mb-4">
+          <label className="block text-[#ccc] mb-1">Featured</label>
+          <select
+            name="featured"
+            className="w-full p-3 rounded bg-[#222] border border-[#333] text-[#eee] focus:border-[#d65aff] focus:shadow-[0_0_8px_#d65aff55] focus:outline-none"
+          >
+            <option value="true">Featured</option>
+            <option value="false">Not Featured</option>
+          </select>
+        </div>
 
         {/* Submit button with subtle hover animation */}
         <motion.button

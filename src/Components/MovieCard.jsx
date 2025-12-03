@@ -9,8 +9,8 @@ const MovieCard = ({
   genre,
   rating,
   showActions = false,
-  onEdit = () => {},
-  onDelete = () => {},
+  handleEdit,
+  handleDelete,
 }) => {
   return (
     <div className="w-[210px] bg-[#161722] border border-[#2a2c3a] rounded-xl overflow-hidden flex flex-col cursor-pointer">
@@ -31,14 +31,14 @@ const MovieCard = ({
         {showActions && (
           <div className="absolute top-2 left-2 flex gap-2">
             <button
-              onClick={() => onEdit(_id)}
+              onClick={() => handleEdit(_id)}
               className="bg-purple-600 text-white px-2 py-1 rounded text-xs shadow-md backdrop-blur-sm bg-black/30 hover:bg-purple-700 transition-all"
             >
               Edit
             </button>
             <button
-              onClick={() => onDelete(_id)}
-              className="bg-red-600 text-white px-2 py-1 rounded text-xs shadow-md backdrop-blur-sm bg-black/30 hover:bg-red-700 transition-all"
+              onClick={() => handleDelete(_id)}
+              className="bg-red-600 text-white px-2 py-1 rounded text-xs shadow-md backdrop-blur-sm bg-black/30 hover:bg-red-700 transition-all cursor-pointer"
             >
               Delete
             </button>
