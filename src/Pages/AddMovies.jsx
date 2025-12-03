@@ -23,6 +23,7 @@ const AddMovie = () => {
       country: form.country.value,
       featured: form.featured.value === "true",
       addedBy: user.email,
+      createdAt: new Date(),
     };
     console.log("Movie to add:", newMovie);
 

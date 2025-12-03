@@ -11,8 +11,9 @@
     "posterUrl": "https://i.ibb.co.com/v6zWYwxT/Inception-2010-theatrical-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-01T11:23:17.445Z"
   },
   {
     "title": "The Dark Knight",
@@ -26,8 +27,9 @@
     "posterUrl": "https://i.ibb.co.com/kVBmph1p/The-Dark-Knight-2008-film.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-02T09:15:12.445Z"
   },
   {
     "title": "Interstellar",
@@ -41,8 +43,9 @@
     "posterUrl": "https://i.ibb.co.com/d0gSLK51/Interstellar-film-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-03T14:10:17.445Z"
   },
   {
     "title": "Parasite",
@@ -56,8 +59,9 @@
     "posterUrl": "https://i.ibb.co.com/N2T2YYcv/parasite-1.jpg",
     "language": "Korean",
     "country": "South Korea",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-01T16:42:45.445Z"
   },
   {
     "title": "The Godfather",
@@ -71,8 +75,9 @@
     "posterUrl": "https://i.ibb.co.com/rKnvm46k/the-godfather-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranfakeid2025@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-02T13:50:33.445Z"
   },
   {
     "title": "Pulp Fiction",
@@ -83,11 +88,12 @@
     "rating": 8.9,
     "duration": 154,
     "plotSummary": "The lives of two mob hitmen, a boxer, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-    "posterUrl": "https://i.ibb.co.com/Cp6TqSqB/pulp-fiction-1.jpg",
+    "posterUrl": "https://i.ibb.co/Cp6TqSqB/pulp-fiction-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-03T08:22:10.445Z"
   },
   {
     "title": "The Shawshank Redemption",
@@ -101,8 +107,9 @@
     "posterUrl": "https://i.ibb.co.com/4wsKNJJB/Shawshank-Redemption.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-01T10:05:21.445Z"
   },
   {
     "title": "Avengers: Endgame",
@@ -116,8 +123,9 @@
     "posterUrl": "https://i.ibb.co.com/9kZSM46g/Avengers-Endgame-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-02T12:30:47.445Z"
   },
   {
     "title": "Joker",
@@ -131,8 +139,9 @@
     "posterUrl": "https://i.ibb.co.com/LD7wQtr5/Joker-2019-film-poster.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranfakeid2025@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-03T15:12:02.445Z"
   },
   {
     "title": "Spirited Away",
@@ -146,8 +155,9 @@
     "posterUrl": "https://i.ibb.co/W4kQPDyV/Spirited-Away-Japanese-poster-1.png",
     "language": "Japanese",
     "country": "Japan",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-01T14:44:11.445Z"
   },
   {
     "title": "The Matrix",
@@ -161,8 +171,9 @@
     "posterUrl": "https://i.ibb.co/pv45PbZ8/The-Matrix-1.png",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-02T17:25:55.445Z"
   },
   {
     "title": "Gladiator",
@@ -176,8 +187,9 @@
     "posterUrl": "https://i.ibb.co/kg4H9Nw1/Gladiator-2000-film-poster-1.png",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-03T11:55:42.445Z"
   },
   {
     "title": "Titanic",
@@ -191,8 +203,9 @@
     "posterUrl": "https://i.ibb.co/V42nhG1/Titanic-1997-film-poster-1.png",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranfakeid2025@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-01T09:42:30.445Z"
   },
   {
     "title": "The Lion King",
@@ -206,8 +219,9 @@
     "posterUrl": "https://i.ibb.co/2352RxHC/The-Lion-King-2019-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-03T13:12:50.445Z"
   },
   {
     "title": "Avengers: Infinity War",
@@ -221,8 +235,9 @@
     "posterUrl": "https://i.ibb.co/60p0vHDb/Avengers-Infinity-War-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-01T18:37:27.445Z"
   },
   {
     "title": "The Silence of the Lambs",
@@ -236,8 +251,9 @@
     "posterUrl": "https://i.ibb.co/5XrQDgTq/The-Silence-of-the-Lambs-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-02T10:05:12.445Z"
   },
   {
     "title": "Avengers Assemble",
@@ -251,8 +267,9 @@
     "posterUrl": "https://i.ibb.co/qYkpVC9C/The-Avengers-2012-film-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-03T12:22:44.445Z"
   },
   {
     "title": "Coco",
@@ -266,8 +283,9 @@
     "posterUrl": "https://i.ibb.co/gbrDkqkb/Coco-2017-film-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranfakeid2025@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-01T15:37:18.445Z"
   },
   {
     "title": "Schindler's List",
@@ -281,8 +299,9 @@
     "posterUrl": "https://i.ibb.co/FLjXfGjX/Schindler-s-List-movie-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-02T14:10:21.445Z"
   },
   {
     "title": "Fight Club",
@@ -296,8 +315,9 @@
     "posterUrl": "https://i.ibb.co/LXHtYY1Z/Fight-Club-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-01T11:48:37.445Z"
   },
   {
     "title": "Guardians of the Galaxy",
@@ -311,8 +331,9 @@
     "posterUrl": "https://i.ibb.co/b9v469k/Guardians-of-the-Galaxy-film-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-03T09:55:19.445Z"
   },
   {
     "title": "Doctor Strange",
@@ -326,8 +347,9 @@
     "posterUrl": "https://i.ibb.co/spMvJWWd/Doctor-Strange-2016-film-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranfakeid2025@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-02T16:02:45.445Z"
   },
   {
     "title": "The Prestige",
@@ -341,8 +363,9 @@
     "posterUrl": "https://i.ibb.co/d902htX/Prestige-poster.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-01T10:20:11.445Z"
   },
   {
     "title": "Dune",
@@ -356,8 +379,9 @@
     "posterUrl": "https://i.ibb.co/GvbwZP4f/Dune-2021-film.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-03T12:45:27.445Z"
   },
   {
     "title": "La La Land",
@@ -371,8 +395,9 @@
     "posterUrl": "https://i.ibb.co/GGKVK7C/La-La-Land-film-1.png",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-01T13:05:55.445Z"
   },
   {
     "title": "Whiplash",
@@ -386,8 +411,9 @@
     "posterUrl": "https://i.ibb.co/fY0jjrvz/Whiplash-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranfakeid2025@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-03T14:02:40.445Z"
   },
   {
     "title": "Mad Max: Fury Road",
@@ -401,8 +427,9 @@
     "posterUrl": "https://i.ibb.co/PGw4J9ZF/Mad-Max-Fury-Road-1.jpg",
     "language": "English",
     "country": "Australia",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-01T16:50:19.445Z"
   },
   {
     "title": "No Time to Die",
@@ -416,8 +443,9 @@
     "posterUrl": "https://i.ibb.co/cc3JPwcC/no-time-to-die.jpg",
     "language": "English",
     "country": "UK",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-02T11:22:30.445Z"
   },
   {
     "title": "Blade Runner 2049",
@@ -431,8 +459,9 @@
     "posterUrl": "https://i.ibb.co/S4hRqcqB/Blade-Runner-2049-poster-1.png",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-03T10:12:21.445Z"
   },
   {
     "title": "Frozen",
@@ -446,8 +475,9 @@
     "posterUrl": "https://i.ibb.co/b5cRxfQK/Frozen-2013-film-poster.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranfakeid2025@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-01T12:42:47.445Z"
   },
   {
     "title": "The Social Network",
@@ -461,8 +491,9 @@
     "posterUrl": "https://i.ibb.co/W4Np1SdT/The-Social-Network-film-poster-1.png",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-02T09:55:31.445Z"
   },
   {
     "title": "Shutter Island",
@@ -476,8 +507,9 @@
     "posterUrl": "https://i.ibb.co/0yb8VSz0/Shutterislandposter-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-03T13:37:12.445Z"
   },
   {
     "title": "Avatar",
@@ -491,8 +523,9 @@
     "posterUrl": "https://i.ibb.co/qYxTbSyF/Avatar-2009-film-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-01T15:55:21.445Z"
   },
   {
     "title": "Black Panther",
@@ -506,8 +539,9 @@
     "posterUrl": "https://i.ibb.co/tM3CCpzF/Black-Panther-film-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-02T17:42:56.445Z"
   },
   {
     "title": "The Revenant",
@@ -521,8 +555,9 @@
     "posterUrl": "https://i.ibb.co/j9yLbvyN/The-Revenant-2015-film-poster.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-03T12:11:05.445Z"
   },
   {
     "title": "Kingdom of Heaven",
@@ -536,8 +571,9 @@
     "posterUrl": "https://i.ibb.co/KpWyFxJ5/kingdom-of-heaven.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranfakeid2025@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-01T09:55:42.445Z"
   },
   {
     "title": "The Hobbit: An Unexpected Journey",
@@ -551,8 +587,9 @@
     "posterUrl": "https://i.ibb.co/3yF0y9kY/The-Hobbit-An-Unexpected-Journey-1.jpg",
     "language": "English",
     "country": "New Zealand",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "imran072022@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-02T10:42:21.445Z"
   },
   {
     "title": "Thor: Ragnarok",
@@ -566,8 +603,9 @@
     "posterUrl": "https://i.ibb.co/4RFMHYGs/Thor-Ragnarok-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranhasanc10@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-03T13:18:47.445Z"
   },
   {
     "title": "Wonder Woman",
@@ -581,8 +619,9 @@
     "posterUrl": "https://i.ibb.co/fV3xrbRT/Wonder-Woman-2017-film-poster-1.jpg",
     "language": "English",
     "country": "USA",
-    "addedBy": "user@example.com",
-    "featured": "false"
+    "addedBy": "ih138096@gmail.com",
+    "featured": "false",
+    "createdAt": "2025-12-01T17:15:33.445Z"
   },
   {
     "title": "The Imitation Game",
@@ -596,7 +635,8 @@
     "posterUrl": "https://i.ibb.co/s95mQVxy/The-Imitation-Game-2014-1.png",
     "language": "English",
     "country": "UK",
-    "addedBy": "user@example.com",
-    "featured": "true"
+    "addedBy": "imranfakeid2025@gmail.com",
+    "featured": "true",
+    "createdAt": "2025-12-02T15:22:41.445Z"
   }
 ]

@@ -4,6 +4,7 @@ import TopRated from "../Components/ForHome/TopRated";
 import MovieCard from "../Components/MovieCard";
 import AboutPlatform from "../Components/ForHome/AboutPlatform";
 import Statistics from "../Components/ForHome/Statistics";
+import RecentlyAdded from "../Components/ForHome/RecentlyAdded";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -31,6 +32,8 @@ const Home = () => {
           Top Rated Movies -
         </h2>
         <TopRated></TopRated>
+        <h2 className="text-white text-3xl font-bold">Recently Added</h2>
+        <RecentlyAdded></RecentlyAdded>
         <AboutPlatform></AboutPlatform>
       </section>
     </div>
