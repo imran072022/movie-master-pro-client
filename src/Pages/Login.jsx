@@ -95,9 +95,18 @@ const Login = () => {
           <motion.button className="w-full text-white cursor-pointer py-2 rounded-lg font-bold btn-gradient-animate hover:brightness-110 transition-all">
             Login
           </motion.button>
-
-          {/* Google Login Button */}
         </form>
+        <motion.div
+          className="flex items-center gap-3 my-4"
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <hr className="flex-1 border-t border-gray-300" />
+          <span className="text-gray-400 text-sm font-medium">OR</span>
+          <hr className="flex-1 border-t border-gray-300" />
+        </motion.div>
+        {/*Google login */}
         <button
           onClick={handleGoogleSignIn}
           className="w-full py-2 bg-gray-100 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 font-bold hover:text-[#111A2B] transition flex items-center justify-center gap-2"

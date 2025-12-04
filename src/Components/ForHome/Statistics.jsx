@@ -33,7 +33,7 @@ const Statistics = ({ totalMovies = 0, totalUsers = 0 }) => {
   const usersCount = useCounter(totalUsers);
 
   return (
-    <section className="py-14 md:py-24 relative overflow-hidden">
+    <section className="py-12 relative overflow-hidden">
       {/* Subtle Grid Overlay */}
       <div className="absolute inset-0 -z-20 opacity-[0.06] bg-[radial-gradient(circle,_#ffffff30_1px,_transparent_1px)] [background-size:20px_20px]"></div>
 
@@ -43,8 +43,12 @@ const Statistics = ({ totalMovies = 0, totalUsers = 0 }) => {
         <div className="w-80 h-80 bg-cyan-400/30 rounded-full blur-[180px] absolute bottom-16 right-10 animate-blob animation-delay-2000"></div>
       </div>
 
-      <h2 className="text-white text-4xl md:text-5xl font-extrabold text-center mb-20 tracking-wider">
-        Platform Statistics
+      <h2
+        className="text-center text-4xl md:text-5xl font-bold mb-12
+             text-white animate-fadeInSlide"
+      >
+        <span className="text-white">By the </span>
+        <span className="text-[#d65aff] ">Numbers</span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto px-5">

@@ -12,9 +12,13 @@ const AllMovies = () => {
       });
   }, []);
   return (
-    <div className="max-w-7xl mx-auto my-20">
-      <h2 className="font-bold text-3xl text-white roboto text-center mt-4 mb-12">
-        All movies here
+    <div className="max-w-7xl mx-auto py-12 md:py-24">
+      <h2
+        className="text-center text-4xl md:text-5xl font-bold mb-12
+             text-white animate-fadeInSlide roboto"
+      >
+        <span className="text-white">Browse </span>
+        <span className="text-[#d65aff] "> Movies</span>
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {movies.map((movie) => (

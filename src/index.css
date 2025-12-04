@@ -33,6 +33,11 @@ body {
   background-size: 200% 200%;
   animation: gradient-x 10s linear infinite;
 }
+.btn-gradient-animate2 {
+  background: linear-gradient(90deg, #d65aff, #ff5da1, #d351ff);
+  background-size: 300% 300%;
+  animation: gradient-x 10s linear infinite;
+}
 .animate-gradient-bg {
   background-size: 200% 200%;
   animation: gradient-bg 12s ease infinite;
@@ -43,8 +48,8 @@ body {
 .swiper-button-prev,
 .swiper-button-next {
   transform: translateY(-30%) !important;
-  height: 40px !important;
-  width: 30px !important;
+  height: 50px !important;
+  width: 36px !important;
   background: rgba(0, 0, 0, 0.55) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   color: #ffffff !important;
@@ -52,10 +57,26 @@ body {
 }
 .swiper-button-prev svg,
 .swiper-button-next svg {
-  width: 12px !important;
-  height: 12px !important;
+  width: 16px !important;
+  height: 16px !important;
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  color: #ff006a !important;
+  color: #d530e4 !important;
+}
+
+/*Subtle animation for headers*/
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInSlide {
+  animation: fadeInSlide 0.8s ease-out forwards;
 }

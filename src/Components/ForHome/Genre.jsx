@@ -46,7 +46,14 @@ const GenreCarousel = () => {
   };
 
   return (
-    <div className="py-10 px-5">
+    <div className="py-12 ">
+      <h2
+        className="text-center text-4xl md:text-5xl font-bold mb-12
+             text-white animate-fadeInSlide"
+      >
+        <span className="text-white">Browse by</span>
+        <span className="text-[#d65aff] "> Genre</span>
+      </h2>
       <Swiper
         modules={[Navigation]}
         slidesPerView={4}

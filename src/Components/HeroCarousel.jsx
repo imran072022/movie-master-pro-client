@@ -17,8 +17,14 @@ export default function HeroCarousel({ movies = [] }) {
   const nextRef = useRef(null);
 
   return (
-    <div className="max-w-7xl mx-auto my-16">
-      <h2 className="font-bold text-3xl text-white mb-4">Featured Movies</h2>;
+    <div className="max-w-7xl mx-auto my-12">
+      <h2
+        className="text-center text-4xl md:text-5xl font-bold mb-12
+             text-white animate-fadeInSlide"
+      >
+        <span className="text-white">Featured </span>
+        <span className="text-[#d65aff] ">Picks</span>
+      </h2>
       <div className="relative w-6xl mx-auto ">
         {/* Navigation buttons */}
         <button

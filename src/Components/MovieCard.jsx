@@ -32,7 +32,7 @@ const MovieCard = ({
           <div className="absolute top-2 left-2 flex gap-2">
             <button
               onClick={() => handleEdit(_id)}
-              className="bg-purple-600 text-white px-2 py-1 rounded text-xs shadow-md backdrop-blur-sm bg-black/30 hover:bg-purple-700 transition-all"
+              className="bg-purple-600 text-white cursor-pointer px-2 py-1 rounded text-xs shadow-md backdrop-blur-sm bg-black/30 hover:bg-purple-700 transition-all"
             >
               Edit
             </button>

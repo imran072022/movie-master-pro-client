@@ -28,11 +28,7 @@ const Home = () => {
         }
       />
       <section className="max-w-7xl mx-auto">
-        <h2 className="roboto font-bold text-3xl text-white">
-          Top Rated Movies -
-        </h2>
         <TopRated></TopRated>
-        <h2 className="text-white text-3xl font-bold">Recently Added</h2>
         <RecentlyAdded></RecentlyAdded>
         <Genre></Genre>
         <AboutPlatform></AboutPlatform>

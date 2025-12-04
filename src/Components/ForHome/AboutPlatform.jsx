@@ -1,14 +1,18 @@
 import React from "react";
-
+import cover from "../../assets/cover.jpg";
 const AboutPlatform = () => {
   return (
-    <section className="w-full bg-[#0d0f1a] text-white py-20">
+    <section className="w-full bg-[#0b0d16] text-white py-20">
       {/* MAIN CONTAINER */}
       <div className="max-w-7xl mx-auto px-4">
         {/* TITLE */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-2 tracking-wide">
-            About <span className="text-blue-500">MovieMaster Pro</span>
+          <h2
+            className="text-center text-4xl md:text-5xl font-bold mb-1
+             text-white animate-fadeInSlide"
+          >
+            <span className="text-white">Featured </span>
+            <span className="text-[#d65aff] ">Picks</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Your ultimate hub for movies — explore ratings, genres, reviews,
@@ -19,7 +23,7 @@ const AboutPlatform = () => {
         {/* TOP BANNER */}
         <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-xl mb-16">
           <img
-            src="https://i.ibb.co/4Jgfj2p/movie-banner.jpg"
+            src={cover}
             className="w-full h-full object-cover opacity-70"
             alt="MovieMaster banner"
           />

@@ -2,12 +2,12 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
 import { Menu, X, UserCircle } from "lucide-react";
 import { AuthContext } from "../Providers/AuthProvider";
-
+import { motion } from "framer-motion";
+const MotionLink = motion(Link);
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
   const location = useLocation();
-
   const navItems = [
     { name: "Home", to: "/" },
     { name: "All Movies", to: "/movies" },
@@ -24,8 +24,9 @@ const Navbar = () => {
     <div className="bg-black text-white w-full z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold tracking-wide font-inter">
-          MovieMaster Pro
+        <Link to="/" className="text-3xl font-bold tracking-wide font-inter">
+          <span className="text-white">MovieMaster</span>
+          <span className="text-[#d65aff]"> Pro</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -36,8 +37,8 @@ const Navbar = () => {
               to={item.to}
               end={item.to === "/movies"}
               className={({ isActive }) =>
-                `text-lg hover:text-cyan-400 transition ${
-                  isActive ? "text-cyan-400" : ""
+                `text-lg hover:text-[#d65aff] transition ${
+                  isActive ? "text-[#d65aff]" : ""
                 }`
               }
             >
@@ -65,46 +66,39 @@ const Navbar = () => {
               </div>
 
               {/* Logout Button */}
-              <button
+              <motion.button
                 onClick={logOut}
                 className="
                   px-5 py-2 rounded-xl font-semibold text-white
-                  bg-gradient-to-r from-red-500 to-pink-600
-                  hover:brightness-110 transition-all cursor-pointer
+                  transition-all cursor-pointer btn-gradient-animate2
                 "
               >
                 Sign Out
-              </button>
+              </motion.button>
             </div>
           ) : (
             <>
               {/* Login Button */}
-              <Link
+              <MotionLink
                 to="/login"
                 className="
-                  relative px-6 py-2 font-semibold text-white rounded-xl
-                  bg-gradient-to-r from-[#00CFFF] to-[#8A2BE2]
-                  shadow-lg shadow-[#00CFFF]/50
-                  hover:bg-gradient-to-r from-[#00A3FF] to-[#5D00FF]
-                  transition-colors duration-300
+                  px-5 py-2 rounded-xl font-semibold text-white
+                  transition-all cursor-pointer btn-gradient-animate2
                 "
               >
                 Login
-              </Link>
+              </MotionLink>
 
               {/* Register Button */}
-              <Link
+              <MotionLink
                 to="/register"
                 className="
-                  relative px-6 py-2 font-semibold text-white rounded-xl
-                  bg-gradient-to-r from-[#00CFFF] to-[#8A2BE2]
-                  shadow-lg shadow-[#00CFFF]/50
-                  hover:bg-gradient-to-r from-[#00A3FF] to-[#5D00FF]
-                  transition-colors duration-300
+                  px-5 py-2 rounded-xl font-semibold text-white
+                  transition-all cursor-pointer btn-gradient-animate2
                 "
               >
                 Register
-              </Link>
+              </MotionLink>
             </>
           )}
         </div>
@@ -125,8 +119,8 @@ const Navbar = () => {
                 to={item.to}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `text-lg hover:text-cyan-400 transition block ${
-                    isActive ? "text-cyan-400" : "text-white"
+                  `text-lg hover:text-[#d65aff] transition ${
+                    isActive ? "text-[#d65aff]" : ""
                   }`
                 }
               >
@@ -152,40 +146,39 @@ const Navbar = () => {
                   <span className="text-white">{user.email}</span>
                 </div>
 
-                <button
+                <motion.button
                   onClick={logOut}
                   className="
-                    mt-3 px-5 py-2 rounded-xl font-semibold text-white
-                    bg-gradient-to-r from-red-500 to-pink-600
-                    hover:brightness-110 transition-all
-                  "
+                  px-5 py-2 rounded-xl font-semibold text-white
+                  transition-all cursor-pointer btn-gradient-animate
+                "
                 >
                   Sign Out
-                </button>
+                </motion.button>
               </>
             ) : (
               <>
-                <Link
+                <MotionLink
                   to="/login"
                   className="
-                    mt-3 px-6 py-2 rounded-xl text-white font-semibold
-                    bg-gradient-to-r from-[#00CFFF] to-[#8A2BE2]
-                  "
+                  px-5 py-2 rounded-xl font-semibold text-white
+                  transition-all cursor-pointer btn-gradient-animate
+                "
                   onClick={() => setOpen(false)}
                 >
                   Login
-                </Link>
+                </MotionLink>
 
-                <Link
+                <MotionLink
                   to="/register"
                   className="
-                    px-6 py-2 rounded-xl text-white font-semibold
-                    bg-gradient-to-r from-[#00CFFF] to-[#8A2BE2]
-                  "
+                  px-5 py-2 rounded-xl font-semibold text-white
+                  transition-all cursor-pointer btn-gradient-animate
+                "
                   onClick={() => setOpen(false)}
                 >
                   Register
-                </Link>
+                </MotionLink>
               </>
             )}
           </div>

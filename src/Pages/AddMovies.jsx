@@ -121,7 +121,7 @@ const AddMovie = () => {
         {/* Submit button with subtle hover animation */}
         <motion.button
           type="submit"
-          className="w-full p-3 mt-4 rounded text-white font-bold text-lg btn-gradient-animate"
+          className="w-full p-3 mt-4 rounded text-white font-bold text-lg btn-gradient-animate cursor-pointer"
           whileHover={{ scale: 1.03, boxShadow: "0 0 12px #d65aff55" }}
           whileTap={{ scale: 0.98 }}
           transition={{ duration: 0.2 }}
