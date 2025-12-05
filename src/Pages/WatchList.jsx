@@ -47,23 +47,31 @@ const WatchList = () => {
     <div className="py-24">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             text-white animate-fadeInSlide"
+             dark:text-white animate-fadeInSlide"
       >
-        <span className="text-white">Your </span>
+        <span>Your </span>
         <span className="text-[#d65aff] "> Watchlist</span>
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-7 max-w-7xl mx-auto">
-        {movies.map((movie) => (
-          <MovieCard
-            key={movie._id}
-            _id={movie._id}
-            title={movie.title}
-            genre={movie.genre}
-            releaseYear={movie.releaseYear}
-            rating={movie.rating}
-            posterUrl={movie.posterUrl}
-          ></MovieCard>
-        ))}
+        {movies.length === 0 ? (
+          <div className="col-span-full py-14">
+            <p className="text-center font-bold text-3xl text-gray-400">
+              No movies in your watchlist yet.
+            </p>
+          </div>
+        ) : (
+          movies.map((movie) => (
+            <MovieCard
+              key={movie._id}
+              _id={movie._id}
+              title={movie.title}
+              genre={movie.genre}
+              releaseYear={movie.releaseYear}
+              rating={movie.rating}
+              posterUrl={movie.posterUrl}
+            ></MovieCard>
+          ))
+        )}
       </div>
     </div>
   );
