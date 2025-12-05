@@ -5,6 +5,7 @@ import AboutPlatform from "../Components/ForHome/AboutPlatform";
 import Statistics from "../Components/ForHome/Statistics";
 import RecentlyAdded from "../Components/ForHome/RecentlyAdded";
 import Genre from "../Components/ForHome/Genre";
+import ThemeToggle from "../Components/ThemeToggle";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);

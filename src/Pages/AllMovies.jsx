@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import MovieCard from "../Components/MovieCard";
+import useWatchlist from "../hooks/useWatchlist";
 
 const AllMovies = () => {
   const [movies, setMovies] = useState([]);
+  const { handleWatchList } = useWatchlist();
   useEffect(() => {
     fetch("http://localhost:3000/movies")
       .then((res) => res.json())
@@ -15,9 +17,9 @@ const AllMovies = () => {
     <div className="max-w-7xl mx-auto py-12 md:py-24">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             text-white animate-fadeInSlide roboto"
+             dark:text-white animate-fadeInSlide roboto"
       >
-        <span className="text-white">Browse </span>
+        <span>Browse </span>
         <span className="text-[#d65aff] "> Movies</span>
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -30,6 +32,7 @@ const AllMovies = () => {
             releaseYear={movie.releaseYear}
             rating={movie.rating}
             posterUrl={movie.posterUrl}
+            handleWatchList={handleWatchList}
           ></MovieCard>
         ))}
       </div>

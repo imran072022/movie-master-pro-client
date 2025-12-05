@@ -45,9 +45,9 @@ const Statistics = ({ totalMovies = 0, totalUsers = 0 }) => {
 
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             text-white animate-fadeInSlide"
+             dark:text-white animate-fadeInSlide"
       >
-        <span className="text-white">By the </span>
+        <span>By the </span>
         <span className="text-[#d65aff] ">Numbers</span>
       </h2>
 

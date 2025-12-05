@@ -20,9 +20,9 @@ export default function HeroCarousel({ movies = [] }) {
     <div className="max-w-7xl mx-auto my-12">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             text-white animate-fadeInSlide"
+             dark:text-white animate-fadeInSlide"
       >
-        <span className="text-white">Featured </span>
+        <span>Featured </span>
         <span className="text-[#d65aff] ">Picks</span>
       </h2>
       <div className="relative w-6xl mx-auto ">
@@ -47,7 +47,7 @@ export default function HeroCarousel({ movies = [] }) {
           loop={movies.length >= 4}
           speed={700}
           autoplay={{
-            delay: 3000,
+            delay: 2500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
@@ -79,9 +79,9 @@ export default function HeroCarousel({ movies = [] }) {
                 <img
                   src={movie.carouselURL || movie.posterUrl}
                   alt={movie.title}
-                  className="w-full h-[326px] object-contain bg-black"
+                  className="w-full h-[326px] object-cover bg-black"
                 />
-                <div className="mt-2 text-white text-sm px-1">
+                <div className="mt-2 dark:text-white text-sm px-1">
                   <h3 className="font-semibold line-clamp-1">{movie.title}</h3>
                   <div className="flex justify-between text-xs opacity-80 mt-1">
                     <span>{movie.genre}</span>

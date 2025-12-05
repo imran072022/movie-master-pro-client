@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import MovieCard from "../Components/MovieCard";
+import useWatchlist from "../hooks/useWatchlist";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
 
 const MyCollection = () => {
   const { user } = useContext(AuthContext);
   const [movies, setMovies] = useState([]);
+  const { handleWatchList } = useWatchlist();
   const navigate = useNavigate();
   useEffect(() => {
     if (user?.email) {
@@ -57,9 +59,9 @@ const MyCollection = () => {
     <div className="max-w-7xl mx-auto py-12 md:py-24">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             text-white animate-fadeInSlide roboto"
+             dark:text-white animate-fadeInSlide roboto"
       >
-        <span className="text-white">Your </span>
+        <span>Your </span>
         <span className="text-[#d65aff] "> Collection</span>
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -71,6 +73,7 @@ const MyCollection = () => {
               showActions={true}
               handleEdit={handleEdit}
               handleDelete={handleDelete}
+              handleWatchList={handleWatchList}
             />
           ))
         ) : (

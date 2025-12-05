@@ -9,6 +9,7 @@ import UpdateMovie from "../Pages/UpdateMovie";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import WatchList from "../Pages/Watchlist";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -59,6 +60,14 @@ const router = createBrowserRouter([
       {
         path: "register",
         Component: Register,
+      },
+      {
+        path: "movies/watchlist",
+        element: (
+          <PrivateRoute>
+            <WatchList></WatchList>
+          </PrivateRoute>
+        ),
       },
     ],
   },

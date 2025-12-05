@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router";
+import { Link, NavLink } from "react-router";
 import { Menu, X, UserCircle } from "lucide-react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { motion } from "framer-motion";
+import ThemeToggle from "../Components/ThemeToggle";
 const MotionLink = motion(Link);
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
-  const location = useLocation();
   const navItems = [
     { name: "Home", to: "/" },
     { name: "All Movies", to: "/movies" },
@@ -17,15 +17,16 @@ const Navbar = () => {
     ? [
         { name: "My Collection", to: "/movies/my-collection" },
         { name: "Add Movie", to: "/movies/add" },
+        { name: "Watchlist", to: "movies/watchlist" },
       ]
     : [];
 
   return (
-    <div className="bg-black text-white w-full z-50 shadow-lg">
+    <div className="dark:bg-black dark:text-white w-full z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-3xl font-bold tracking-wide font-inter">
-          <span className="text-white">MovieMaster</span>
+        <Link to="/" className="text-3xl font-bold tracking-wide roboto">
+          <span>MovieMaster</span>
           <span className="text-[#d65aff]"> Pro</span>
         </Link>
 
@@ -37,14 +38,17 @@ const Navbar = () => {
               to={item.to}
               end={item.to === "/movies"}
               className={({ isActive }) =>
-                `text-lg hover:text-[#d65aff] transition ${
-                  isActive ? "text-[#d65aff]" : ""
+                `text-lg hover:text-[#d65aff]  transition ${
+                  isActive ? "text-[#d65aff] " : ""
                 }`
               }
             >
               {item.name}
             </NavLink>
           ))}
+
+          {/* Theme toggle */}
+          <ThemeToggle />
 
           {/* If user is logged in */}
           {user ? (
@@ -127,6 +131,11 @@ const Navbar = () => {
                 {item.name}
               </NavLink>
             ))}
+
+            {/* Theme toggle (mobile) */}
+            <div className="pl-2">
+              <ThemeToggle />
+            </div>
 
             {/* MOBILE: If user exists */}
             {user ? (

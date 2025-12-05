@@ -97,7 +97,7 @@ const Login = () => {
           </motion.button>
         </form>
         <motion.div
-          className="flex items-center gap-3 my-4"
+          className="flex items-center gap-3 my-2"
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}

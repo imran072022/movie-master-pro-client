@@ -11,8 +11,8 @@ const AboutPlatform = () => {
             className="text-center text-4xl md:text-5xl font-bold mb-1
              text-white animate-fadeInSlide"
           >
-            <span className="text-white">Featured </span>
-            <span className="text-[#d65aff] ">Picks</span>
+            <span>About </span>
+            <span className="text-[#d65aff] "> MovieMaster Pro</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Your ultimate hub for movies — explore ratings, genres, reviews,
@@ -45,7 +45,7 @@ const AboutPlatform = () => {
           {/* Feature Card */}
           <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
             <div className="text-blue-500 text-3xl mb-3">🎬</div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="text-xl font-semibold mb-2 ">
               Massive Movie Database
             </h4>
             <p className="text-gray-400">
@@ -57,7 +57,7 @@ const AboutPlatform = () => {
           {/* Feature Card */}
           <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
             <div className="text-blue-500 text-3xl mb-3">⭐</div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="text-xl font-semibold mb-2 ">
               Advanced Rating System
             </h4>
             <p className="text-gray-400">
@@ -69,7 +69,7 @@ const AboutPlatform = () => {
           {/* Feature Card */}
           <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
             <div className="text-blue-500 text-3xl mb-3">🎭</div>
-            <h4 className="text-xl font-semibold mb-2">Genre Explorer</h4>
+            <h4 className="text-xl font-semibold mb-2 ">Genre Explorer</h4>
             <p className="text-gray-400">
               Browse beautifully designed genre cards for quick discovery.
             </p>
@@ -78,7 +78,7 @@ const AboutPlatform = () => {
           {/* Feature Card */}
           <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
             <div className="text-blue-500 text-3xl mb-3">📊</div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="text-xl font-semibold mb-2 ">
               Smart Recommendations
             </h4>
             <p className="text-gray-400">
@@ -90,7 +90,7 @@ const AboutPlatform = () => {
           {/* Feature Card */}
           <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
             <div className="text-blue-500 text-3xl mb-3">📱</div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="text-xl font-semibold mb-2 ">
               Responsive & Smooth UI
             </h4>
             <p className="text-gray-400">
@@ -102,7 +102,7 @@ const AboutPlatform = () => {
           {/* Feature Card */}
           <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
             <div className="text-blue-500 text-3xl mb-3">⚡</div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="text-xl font-semibold mb-2 ">
               Super-Fast Performance
             </h4>
             <p className="text-gray-400">
