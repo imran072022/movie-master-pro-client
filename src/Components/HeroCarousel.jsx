@@ -18,13 +18,11 @@ export default function HeroCarousel({ movies = [] }) {
 
   return (
     <div className="max-w-7xl mx-auto my-12">
-      <h2
-        className="text-center text-4xl md:text-5xl font-bold mb-12
-             dark:text-white animate-fadeInSlide"
-      >
+      <h2 className="text-white text-center text-4xl md:text-5xl font-bold mb-12 animate-fadeInSlide">
         <span>Featured </span>
-        <span className="text-[#d65aff] ">Picks</span>
+        <span className="text-[#d65aff]">Picks</span>
       </h2>
+
       <div className="relative w-6xl mx-auto ">
         {/* Navigation buttons */}
         <button
@@ -81,7 +79,7 @@ export default function HeroCarousel({ movies = [] }) {
                   alt={movie.title}
                   className="w-full h-[326px] object-cover bg-black"
                 />
-                <div className="mt-2 dark:text-white text-sm px-1">
+                <div className="mt-2 text-white text-sm px-1">
                   <h3 className="font-semibold line-clamp-1">{movie.title}</h3>
                   <div className="flex justify-between text-xs opacity-80 mt-1">
                     <span>{movie.genre}</span>

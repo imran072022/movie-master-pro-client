@@ -1,8 +1,10 @@
 import React, { createContext, useEffect, useState } from "react";
+
 export const ThemeContext = createContext();
+
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "light";
+    return localStorage.getItem("theme") || "dark"; // dark default
   });
 
   useEffect(() => {
@@ -18,11 +20,7 @@ const ThemeProvider = ({ children }) => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext value={{ theme, toggleTheme }}>{children}</ThemeContext>;
 };
 
 export default ThemeProvider;

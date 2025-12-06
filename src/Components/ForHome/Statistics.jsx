@@ -45,7 +45,7 @@ const Statistics = ({ totalMovies = 0, totalUsers = 0 }) => {
 
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             dark:text-white animate-fadeInSlide"
+             text-white animate-fadeInSlide"
       >
         <span>By the </span>
         <span className="text-[#d65aff] ">Numbers</span>
@@ -66,7 +66,7 @@ const Statistics = ({ totalMovies = 0, totalUsers = 0 }) => {
           {/* Icon + Text */}
           <div className="flex items-center gap-4 relative z-10">
             <BarChart3 className="w-14 h-14 text-purple-400" />
-            <h3 className="text-lg font-semibold text-gray-300">
+            <h3 className="text-lg font-semibold text-gray-300 ">
               Total Movies
             </h3>
           </div>

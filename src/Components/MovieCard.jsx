@@ -29,7 +29,7 @@ const MovieCard = ({
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="w-[210px] dark:bg-[#1A1A1A] dark:border  border border-gray-400 dark:border-[#2a2c3a] rounded-xl overflow-hidden flex flex-col">
+    <div className="w-[210px] bg-[#1A1A1A]   border  border-[#2a2c3a] rounded-xl overflow-hidden flex flex-col">
       {/* Poster */}
       <div className="relative overflow-hidden">
         <img
@@ -64,10 +64,10 @@ const MovieCard = ({
       <div className="p-3 flex flex-col flex-1">
         {/* Fixed height zone so buttons never shift */}
         <div className="min-h-[60px]">
-          <h2 className="dark:text-white text-base font-semibold line-clamp-2 leading-tight roboto">
+          <h2 className="text-white text-base font-semibold line-clamp-2 leading-tight roboto">
             {title}
           </h2>
-          <p className="dark:text-gray-400 text-sm my-1">
+          <p className="text-gray-400 text-sm my-1">
             {genre} • {releaseYear}
           </p>
         </div>
@@ -101,7 +101,7 @@ const MovieCard = ({
           {/* Details */}
           <Link
             to={`/movie/${_id}`}
-            className="block w-full border rounded-4xl border-gray-800  dark:text-gray-200 py-1  hover:bg-gray-700 text-center transition"
+            className="block w-full border rounded-4xl border-gray-800  text-gray-200 py-1  hover:bg-gray-700 text-center transition"
           >
             Details
           </Link>

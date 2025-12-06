@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
 @plugin "daisyui";
-
 .inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -9,18 +9,6 @@
 .roboto {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-}
-@import "tailwindcss";
-
-body {
-  font-family: "Inter", sans-serif;
-  background-color: white;
-  color: black;
-}
-
-html.dark body {
-  background-color: #000000;
-  color: #ffffff;
 }
 
 /*Key Frame*/
@@ -86,15 +74,4 @@ html.dark body {
 
 .animate-fadeInSlide {
   animation: fadeInSlide 0.8s ease-out forwards;
-}
-
-/* ThemeToggle specific hover override to ensure dark variant wins */
-.theme-toggle {
-  transition: background-color 200ms ease;
-}
-.theme-toggle:hover {
-  background-color: #e5e7eb; /* gray-200 */
-}
-.dark .theme-toggle:hover {
-  background-color: #6b7280; /* gray-500 */
 }

@@ -16,7 +16,7 @@ const RecentlyAdded = () => {
     <div className="py-12">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             dark:text-white animate-fadeInSlide"
+             text-white animate-fadeInSlide"
       >
         <span>Recently </span>
         <span className="text-[#d65aff] ">Added</span>
