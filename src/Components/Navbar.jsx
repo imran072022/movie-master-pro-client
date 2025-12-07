@@ -16,13 +16,13 @@ const Navbar = () => {
   const privateNavItems = user
     ? [
         { name: "My Collection", to: "/movies/my-collection" },
-        { name: "Add Movie", to: "/movies/add" },
         { name: "Watchlist", to: "movies/watchlist" },
+        { name: "Add Movie", to: "/movies/add" },
       ]
     : [];
 
   return (
-    <div className=" text-white w-full z-50 shadow-lg">
+    <div className=" text-white dark:text-black w-full z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-3xl font-bold tracking-wide roboto">
@@ -70,15 +70,16 @@ const Navbar = () => {
               </div>
 
               {/* Logout Button */}
-              <motion.button
+              <MotionLink
                 onClick={logOut}
+                to="/"
                 className="
                   px-5 py-2 rounded-xl font-semibold text-white
                   transition-all cursor-pointer btn-gradient-animate2
                 "
               >
                 Sign Out
-              </motion.button>
+              </MotionLink>
             </div>
           ) : (
             <>

@@ -1,16 +1,17 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { Link } from "react-router";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-
+import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 const FooterCinematic = () => {
   const MotionLink = motion(Link);
 
   const socialIcons = [
     { icon: <FaFacebookF />, color: "#d65aff", link: "#" },
-    { icon: <FaTwitter />, color: "#ff5da1", link: "#" },
+    { icon: <BsTwitterX />, color: "#ff5da1", link: "#" },
     { icon: <FaInstagram />, color: "#00FFC6", link: "#" },
     { icon: <FaYoutube />, color: "#d351ff", link: "#" },
+    { icon: <FaTiktok />, color: "#ff0050", link: "#" },
   ];
 
   const neonLinkHover = {

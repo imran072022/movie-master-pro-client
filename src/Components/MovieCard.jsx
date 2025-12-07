@@ -29,13 +29,13 @@ const MovieCard = ({
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="w-[210px] bg-[#1A1A1A]   border  border-[#2a2c3a] rounded-xl overflow-hidden flex flex-col">
+    <div className="w-[210px] bg-[#1A1A1A] dark:bg-white border border-[#2a2c3a] dark:border-gray-400 rounded-xl overflow-hidden flex flex-col">
       {/* Poster */}
       <div className="relative overflow-hidden">
         <img
           src={posterUrl}
           alt={title}
-          className="w-[210px] h-[290px] object-cover transition-transform duration-300 ease-out hover:scale-105"
+          className="w-[210px] h-[290px] object-cover  transition-transform duration-300 ease-out hover:scale-105"
         />
 
         <span className="absolute top-2 right-2 bg-black/70 text-yellow-400 text-sm font-semibold px-2 py-1 rounded-md">
@@ -64,10 +64,10 @@ const MovieCard = ({
       <div className="p-3 flex flex-col flex-1">
         {/* Fixed height zone so buttons never shift */}
         <div className="min-h-[60px]">
-          <h2 className="text-white text-base font-semibold line-clamp-2 leading-tight roboto">
+          <h2 className="text-white dark:text-black text-base font-semibold line-clamp-2 leading-tight roboto">
             {title}
           </h2>
-          <p className="text-gray-400 text-sm my-1">
+          <p className="text-gray-400 dark:text-gray-800 text-sm my-1">
             {genre} • {releaseYear}
           </p>
         </div>
@@ -83,7 +83,7 @@ const MovieCard = ({
               }
               handle(_id);
             }}
-            className="w-full cursor-pointer text-base border border-gray-800 text-[#5799EF] py-1 hover:bg-gray-700 transition flex bg-[#2C2C2C] rounded-4xl items-center justify-center gap-2"
+            className="w-full cursor-pointer text-base border border-gray-800 text-[#5799EF] dark:text-white py-1 hover:bg-gray-700 transition flex bg-[#2C2C2C] rounded-4xl items-center justify-center gap-2"
           >
             {currentlyIn ? (
               <>
@@ -101,7 +101,7 @@ const MovieCard = ({
           {/* Details */}
           <Link
             to={`/movie/${_id}`}
-            className="block w-full border rounded-4xl border-gray-800  text-gray-200 py-1  hover:bg-gray-700 text-center transition"
+            className="block w-full border rounded-4xl border-gray-800  text-gray-200 dark:text-gray-900 py-1  hover:bg-gray-700 dark:hover:bg-gray-200 text-center transition"
           >
             Details
           </Link>

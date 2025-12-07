@@ -2,19 +2,19 @@ import React from "react";
 import cover from "../../assets/cover.jpg";
 const AboutPlatform = () => {
   return (
-    <section className="w-full bg-[#0b0d16] text-white py-20">
+    <section className="w-full bg-[#0b0d16] dark:bg-gradient-to-br dark:from-[#f5f0ff] dark:via-[#f8f4ff] dark:to-[#f0e8ff] text-white  py-20">
       {/* MAIN CONTAINER */}
       <div className="max-w-7xl mx-auto px-4">
         {/* TITLE */}
         <div className="text-center mb-14">
           <h2
-            className="text-center text-4xl md:text-5xl font-bold mb-1
-             text-white animate-fadeInSlide"
+            className="text-center text-4xl md:text-5xl font-bold mb-2
+             text-white dark:text-black animate-fadeInSlide"
           >
             <span>About </span>
             <span className="text-[#d65aff] "> MovieMaster Pro</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 dark:text-gray-800 max-w-2xl mx-auto text-lg">
             Your ultimate hub for movies — explore ratings, genres, reviews,
             collections and personalized recommendations.
           </p>
@@ -30,7 +30,7 @@ const AboutPlatform = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
 
           <div className="absolute left-8 top-1/2 -translate-y-1/2">
-            <h3 className="text-3xl font-bold mb-3">
+            <h3 className="text-3xl font-bold mb-3 dark:text-white">
               A Smarter Way to Explore Movies
             </h3>
             <p className="text-gray-300 max-w-md">
@@ -43,69 +43,71 @@ const AboutPlatform = () => {
         {/* FEATURES GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Feature Card */}
-          <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
+          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
             <div className="text-blue-500 text-3xl mb-3">🎬</div>
-            <h4 className="text-xl font-semibold mb-2 ">
+            <h4 className="text-xl font-semibold mb-2 dark:text-black">
               Massive Movie Database
             </h4>
-            <p className="text-gray-400">
+            <p className="text-gray-400 dark:text-gray-800">
               Access thousands of movies with rich details — cast, ratings,
               reviews, posters, plot summaries and more.
             </p>
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
+          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
             <div className="text-blue-500 text-3xl mb-3">⭐</div>
-            <h4 className="text-xl font-semibold mb-2 ">
+            <h4 className="text-xl font-semibold mb-2 dark:text-black">
               Advanced Rating System
             </h4>
-            <p className="text-gray-400">
+            <p className="text-gray-400 dark:text-gray-800">
               Sort and filter movies by top-rated, trending, featured and much
               more.
             </p>
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
+          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
             <div className="text-blue-500 text-3xl mb-3">🎭</div>
-            <h4 className="text-xl font-semibold mb-2 ">Genre Explorer</h4>
-            <p className="text-gray-400">
+            <h4 className="text-xl font-semibold mb-2 dark:text-black">
+              Genre Explorer
+            </h4>
+            <p className="text-gray-400 dark:text-gray-800">
               Browse beautifully designed genre cards for quick discovery.
             </p>
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
+          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
             <div className="text-blue-500 text-3xl mb-3">📊</div>
-            <h4 className="text-xl font-semibold mb-2 ">
+            <h4 className="text-xl font-semibold mb-2 dark:text-black">
               Smart Recommendations
             </h4>
-            <p className="text-gray-400">
+            <p className="text-gray-400 dark:text-gray-800">
               MovieMaster Pro learns your taste and shows smarter suggestions
               over time.
             </p>
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
+          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
             <div className="text-blue-500 text-3xl mb-3">📱</div>
-            <h4 className="text-xl font-semibold mb-2 ">
+            <h4 className="text-xl font-semibold mb-2 dark:text-black ">
               Responsive & Smooth UI
             </h4>
-            <p className="text-gray-400">
+            <p className="text-gray-400 dark:text-gray-800">
               Built with modern design, smooth animations and mobile-friendly
               layouts.
             </p>
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] p-6 rounded-2xl shadow-lg hover:bg-[#1b2234] transition border border-white/5 min-h-[200px]">
+          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
             <div className="text-blue-500 text-3xl mb-3">⚡</div>
-            <h4 className="text-xl font-semibold mb-2 ">
+            <h4 className="text-xl font-semibold mb-2 dark:text-black">
               Super-Fast Performance
             </h4>
-            <p className="text-gray-400">
+            <p className="text-gray-400 dark:text-gray-800">
               Powered by optimized API routes and efficient database queries.
             </p>
           </div>

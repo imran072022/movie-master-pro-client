@@ -201,7 +201,7 @@ const Register = () => {
         </motion.div>
         <button
           onClick={handleGoogleSignIn}
-          className="w-full py-2 bg-gray-100 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 font-bold hover:text-[#111A2B] transition flex items-center justify-center gap-2"
+          className="w-full py-2 bg-gray-100 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 font-bold text-[#111A2B] transition flex items-center justify-center gap-2"
         >
           <FcGoogle className="w-6 h-6" /> Continue with Google
         </button>

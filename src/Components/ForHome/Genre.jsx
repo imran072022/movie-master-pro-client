@@ -49,7 +49,7 @@ const GenreCarousel = () => {
     <div className="py-12 ">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             text-white animate-fadeInSlide"
+             text-white dark:text-black animate-fadeInSlide"
       >
         <span>Browse by</span>
         <span className="text-[#d65aff] "> Genre</span>
@@ -70,15 +70,15 @@ const GenreCarousel = () => {
       >
         {genres.map((genre) => (
           <SwiperSlide key={genre}>
-            <div className="cursor-pointer">
-              <div className="relative w-full aspect-[5/3] rounded-t-2xl overflow-hidden">
+            <div className="cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-2 pt-3.5">
+              <div className=" relative w-full aspect-[5/3] rounded-t-2xl overflow-hidden">
                 <img
                   src={genreImages[genre]}
                   alt={genre}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover  "
                 />
               </div>
-              <div className="text-center font-semibold bg-[#1A1A1A] text-white py-1.5 rounded-b-2xl">
+              <div className="text-center font-semibold bg-[#1A1A1A] text-white hover:text-[#5799EF] py-1.5 rounded-b-2xl">
                 {genre}
               </div>
             </div>

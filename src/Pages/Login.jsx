@@ -122,7 +122,7 @@ const Login = () => {
           {/*Custom Error Message */}
           <div className="text-sm text-red-500 my-1">{error}</div>
           {/* Forgot Password */}
-          <p className="text-gray-700 text-sm hover:text-[#ff5da1] hover:underline mb-1.5 mt-4 ml-1  cursor-pointer">
+          <p className="text-gray-700 text-sm hover:text-[#ff5da1] inline-block hover:underline mb-1.5 mt-2.5 ml-1  cursor-pointer">
             Forget Password?
           </p>
 

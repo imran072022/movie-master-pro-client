@@ -59,7 +59,7 @@ const MyCollection = () => {
     <div className="max-w-7xl mx-auto py-12 md:py-24">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             text-white animate-fadeInSlide roboto"
+             text-white dark:text-black animate-fadeInSlide roboto"
       >
         <span>Your </span>
         <span className="text-[#d65aff] "> Collection</span>

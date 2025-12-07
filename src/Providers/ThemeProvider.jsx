@@ -8,6 +8,7 @@ const ThemeProvider = ({ children }) => {
   });
 
   useEffect(() => {
+    console.log("Theme changed to:", theme);
     localStorage.setItem("theme", theme);
     if (theme === "dark") {
       document.documentElement.classList.add("dark");

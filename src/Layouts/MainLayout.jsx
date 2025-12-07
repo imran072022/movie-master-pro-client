@@ -5,8 +5,7 @@ import { Outlet } from "react-router";
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white dark:bg-white dark:text-black transition-colors duration-300">
-      <div className="hidden bg-black text-white dark:bg-white dark:text-black" />
+    <div className="min-h-screen flex flex-col bg-black dark:bg-white text-white dark:text-black  transition-colors duration-300">
       <header>
         <nav>
           <Navbar></Navbar>

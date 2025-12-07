@@ -102,7 +102,7 @@ const AllMovies = () => {
 
   return (
     <div className="max-w-7xl mx-auto py-12 md:py-24">
-      <h2 className="text-center text-4xl md:text-5xl font-bold mb-12 text-white animate-fadeInSlide roboto">
+      <h2 className="text-center text-4xl md:text-5xl font-bold mb-12 text-white dark:text-black animate-fadeInSlide roboto">
         <span>Browse </span>
         <span className="text-[#d65aff] "> Movies</span>
       </h2>
@@ -119,13 +119,13 @@ const AllMovies = () => {
           </button>
 
           {dropdownOpen && (
-            <div className="absolute left-0 mt-2 w-48 bg-[#222] border border-gray-600 rounded shadow-lg z-50 overflow-hidden">
+            <div className="absolute left-0 mt-2 w-48 bg-[#222] dark:bg-[#f5f5f5] border border-gray-600 dark:border-gray-300 rounded shadow-lg z-50 overflow-hidden">
               {genres.map((genre) => (
                 <label
                   key={genre}
-                  className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-[#333]"
+                  className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-[#333] dark:hover:bg-gray-300"
                 >
-                  <span className="text-white">{genre}</span>
+                  <span className="text-white dark:text-black">{genre}</span>
                   <input
                     className="checkbox checkbox-secondary"
                     type="checkbox"
@@ -148,7 +148,7 @@ const AllMovies = () => {
             placeholder="Min Rating"
             value={minRating}
             onChange={(e) => setMinRating(e.target.value)}
-            className="p-2 rounded w-28  text-white placeholder-gray-300"
+            className="p-2 rounded w-28  text-white dark:text-black placeholder-gray-300 dark:placeholder-gray-600"
           />
           <input
             type="number"
@@ -158,7 +158,7 @@ const AllMovies = () => {
             placeholder="Max Rating"
             value={maxRating}
             onChange={(e) => setMaxRating(e.target.value)}
-            className="p-2 rounded w-28  text-white placeholder-gray-300"
+            className="p-2 rounded w-28  text-white dark:text-black placeholder-gray-300 dark:placeholder-gray-600"
           />
         </div>
 

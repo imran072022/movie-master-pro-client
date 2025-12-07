@@ -22,7 +22,7 @@ const TopRated = () => {
     <div className="py-12">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             text-white animate-fadeInSlide"
+             text-white dark:text-black animate-fadeInSlide"
       >
         <span>Top Rated </span>
         <span className="text-[#d65aff] ">Today</span>

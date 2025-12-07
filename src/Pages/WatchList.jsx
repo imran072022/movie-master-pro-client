@@ -47,7 +47,7 @@ const WatchList = () => {
     <div className="py-24">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
-             text-white animate-fadeInSlide"
+             text-white animate-fadeInSlide dark:text-black roboto"
       >
         <span>Your </span>
         <span className="text-[#d65aff] "> Watchlist</span>
