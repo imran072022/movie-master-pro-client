@@ -10,7 +10,8 @@ import Loading from "../Components/Loading";
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const user = null;
+  return <div>{user.name}</div>;
   useEffect(() => {
     fetch("http://localhost:3000/movies")
       .then((res) => res.json())

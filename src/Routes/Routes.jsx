@@ -10,10 +10,14 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import WatchList from "../Pages/Watchlist";
+import Page404 from "../Pages/Page404";
+import ErrorFallback from "../Pages/ErrorFallBack";
 const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayout,
+    errorElement: <Page404></Page404>,
+    ErrorBoundary: ErrorFallback,
     children: [
       {
         Component: Home,
@@ -71,5 +75,6 @@ const router = createBrowserRouter([
       },
     ],
   },
+  { path: "*", Component: Page404 },
 ]);
 export default router;
