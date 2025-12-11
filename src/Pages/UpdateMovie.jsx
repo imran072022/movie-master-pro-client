@@ -1,21 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
-import { useLocation } from "react-router";
+import { useLocation, useParams } from "react-router";
+import Loading from "../Components/Loading";
 
 const UpdateMovie = () => {
   const location = useLocation();
-  const movie = location.state?.movie;
+  const { id } = useParams();
+  const movieFromState = location.state?.movie;
+  const [movie, setMovie] = useState(movieFromState || null);
+  const [loading, setLoading] = useState(!movieFromState);
   const { user } = useContext(AuthContext);
 
-  if (!movie) {
-    return (
-      <div className="text-white text-center mt-20 dark:text-[#3a3a4c]">
-        Movie not found.
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (!movieFromState) {
+      fetch(`http://localhost:3000/movie/${id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setMovie(data);
+          setLoading(false);
+        });
+    }
+  }, [id, movieFromState]);
+  if (loading) return <Loading></Loading>;
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -62,7 +70,7 @@ const UpdateMovie = () => {
   return (
     <div
       className="
-        relative min-h-screen flex justify-center items-center p-4 overflow-hidden py-14 md:py-24
+        relative min-h-screen flex justify-center items-center p-4 overflow-hidden py-28 md:py-40
         
         /* DARK MODE */
         bg-[radial-gradient(circle_at_center,_#25163b_0%,_#1a1a2e_60%,_#000000_100%)]

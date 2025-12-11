@@ -76,3 +76,15 @@
 .animate-fadeInSlide {
   animation: fadeInSlide 0.8s ease-out forwards;
 }
+
+html {
+  background: #000000;
+}
+html.dark {
+  background: radial-gradient(
+    circle at center,
+    #ffffff 0%,
+    #f8f4ff 60%,
+    #f0e8ff 100%
+  );
+}

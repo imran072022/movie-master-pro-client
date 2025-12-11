@@ -23,7 +23,7 @@ export default function HeroCarousel({ movies = [] }) {
         <span className="text-[#d65aff]">Picks</span>
       </h2>
 
-      <div className="relative w-6xl mx-auto ">
+      <div className="relative w-full mx-auto ">
         {/* Navigation buttons */}
         <button
           ref={prevRef}
@@ -91,22 +91,6 @@ export default function HeroCarousel({ movies = [] }) {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Custom Pagination below carousel */}
-        <div className="custom-pagination flex justify-center mt-4"></div>
-
-        <style jsx>{`
-          .custom-pagination .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            background-color: #888888;
-            opacity: 1;
-            margin: 0 4px;
-          }
-          .custom-pagination .swiper-pagination-bullet-active {
-            background-color: #3b82f6;
-          }
-        `}</style>
       </div>
     </div>
   );

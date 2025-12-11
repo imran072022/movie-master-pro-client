@@ -4,7 +4,7 @@ const AboutPlatform = () => {
   return (
     <section className="w-full bg-[#0b0d16] dark:bg-gradient-to-br dark:from-[#f5f0ff] dark:via-[#f8f4ff] dark:to-[#f0e8ff] text-white  py-20">
       {/* MAIN CONTAINER */}
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-2.5">
         {/* TITLE */}
         <div className="text-center mb-14">
           <h2
@@ -21,7 +21,7 @@ const AboutPlatform = () => {
         </div>
 
         {/* TOP BANNER */}
-        <div className="relative w-full h-72 rounded-2xl overflow-hidden shadow-xl mb-16">
+        <div className="relative w-full h-50 sm:h-72 rounded-2xl overflow-hidden shadow-xl mb-16">
           <img
             src={cover}
             className="w-full h-full object-cover opacity-70"
@@ -29,11 +29,11 @@ const AboutPlatform = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
 
-          <div className="absolute left-8 top-1/2 -translate-y-1/2">
-            <h3 className="text-3xl font-bold mb-3 dark:text-white">
+          <div className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2">
+            <h3 className="sm:text-3xl text-2xl font-bold mb-3 dark:text-white">
               A Smarter Way to Explore Movies
             </h3>
-            <p className="text-gray-300 max-w-md">
+            <p className="text-gray-300 max-w-md sm:text-base text-sm">
               Designed for movie lovers, critics, and creators. Experience
               powerful search, curated lists, and interactive movie insights.
             </p>
@@ -41,23 +41,27 @@ const AboutPlatform = () => {
         </div>
 
         {/* FEATURES GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Feature Card */}
-          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
-            <div className="text-blue-500 text-3xl mb-3">🎬</div>
-            <h4 className="text-xl font-semibold mb-2 dark:text-black">
+          <div className="bg-[#121622] dark:bg-gradient-to-r p-4 sm:p-6 dark:from-pink-200 dark:to-purple-200 rounded-2xl shadow-lg transition border border-white/5 sm:h-[200px] h-[175px] ">
+            <div className="text-blue-500 text-2xl sm:text-3xl mb-1 sm:mb-3">
+              🎬
+            </div>
+            <h4 className="text-xl font-semibold mb-1 sm:mb-2 dark:text-black">
               Massive Movie Database
             </h4>
-            <p className="text-gray-400 dark:text-gray-800">
+            <p className="text-gray-400 dark:text-gray-800 line-clamp-2 sm:line-clamp-3">
               Access thousands of movies with rich details — cast, ratings,
               reviews, posters, plot summaries and more.
             </p>
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
-            <div className="text-blue-500 text-3xl mb-3">⭐</div>
-            <h4 className="text-xl font-semibold mb-2 dark:text-black">
+          <div className="bg-[#121622] dark:bg-gradient-to-r p-4 sm:p-6 dark:from-pink-200 dark:to-purple-200 rounded-2xl shadow-lg transition border border-white/5 sm:h-[200px] h-[175px]">
+            <div className="text-blue-500 text-2xl sm:text-3xl mb-1 sm:mb-3">
+              ⭐
+            </div>
+            <h4 className="text-xl font-semibold mb-1 sm:mb-2 dark:text-black">
               Advanced Rating System
             </h4>
             <p className="text-gray-400 dark:text-gray-800">
@@ -67,9 +71,11 @@ const AboutPlatform = () => {
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
-            <div className="text-blue-500 text-3xl mb-3">🎭</div>
-            <h4 className="text-xl font-semibold mb-2 dark:text-black">
+          <div className="bg-[#121622] dark:bg-gradient-to-r p-4 sm:p-6 dark:from-pink-200 dark:to-purple-200 rounded-2xl shadow-lg transition border border-white/5 sm:h-[200px] h-[175px]">
+            <div className="text-blue-500 text-2xl sm:text-3xl mb-1 sm:mb-3">
+              🎭
+            </div>
+            <h4 className="text-xl font-semibold mb-1 sm:mb-2 dark:text-black">
               Genre Explorer
             </h4>
             <p className="text-gray-400 dark:text-gray-800">
@@ -78,9 +84,11 @@ const AboutPlatform = () => {
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
-            <div className="text-blue-500 text-3xl mb-3">📊</div>
-            <h4 className="text-xl font-semibold mb-2 dark:text-black">
+          <div className="bg-[#121622] dark:bg-gradient-to-r p-4 sm:p-6 dark:from-pink-200 dark:to-purple-200 rounded-2xl shadow-lg transition border border-white/5 sm:h-[200px] h-[175px]">
+            <div className="text-blue-500 text-2xl sm:text-3xl mb-1 sm:mb-3">
+              📊
+            </div>
+            <h4 className="text-xl font-semibold mb-1 sm:mb-2 dark:text-black">
               Smart Recommendations
             </h4>
             <p className="text-gray-400 dark:text-gray-800">
@@ -90,9 +98,11 @@ const AboutPlatform = () => {
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
-            <div className="text-blue-500 text-3xl mb-3">📱</div>
-            <h4 className="text-xl font-semibold mb-2 dark:text-black ">
+          <div className="bg-[#121622] dark:bg-gradient-to-r p-4 sm:p-6 dark:from-pink-200 dark:to-purple-200 rounded-2xl shadow-lg transition border border-white/5 sm:h-[200px] h-[175px]">
+            <div className="text-blue-500 text-2xl sm:text-3xl mb-1 sm:mb-3">
+              📱
+            </div>
+            <h4 className="text-xl font-semibold mb-1 sm:mb-2 dark:text-black">
               Responsive & Smooth UI
             </h4>
             <p className="text-gray-400 dark:text-gray-800">
@@ -102,9 +112,11 @@ const AboutPlatform = () => {
           </div>
 
           {/* Feature Card */}
-          <div className="bg-[#121622] dark:bg-gradient-to-r dark:from-pink-200  dark:to-purple-200 p-6 rounded-2xl shadow-lg transition border border-white/5 min-h-[200px] ">
-            <div className="text-blue-500 text-3xl mb-3">⚡</div>
-            <h4 className="text-xl font-semibold mb-2 dark:text-black">
+          <div className="bg-[#121622] dark:bg-gradient-to-r p-4 sm:p-6 dark:from-pink-200 dark:to-purple-200 rounded-2xl shadow-lg transition border border-white/5 sm:h-[200px] h-[175px]">
+            <div className="text-blue-500 text-2xl sm:text-3xl mb-1 sm:mb-3">
+              ⚡
+            </div>
+            <h4 className="text-xl font-semibold mb-1 sm:mb-2 dark:text-black">
               Super-Fast Performance
             </h4>
             <p className="text-gray-400 dark:text-gray-800">

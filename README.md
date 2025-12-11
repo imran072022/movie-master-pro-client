@@ -1,16 +1,47 @@
-# React + Vite
+# 🎬 MovieMaster Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=white)](https://firebase.google.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)](https://www.netlify.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## React Compiler
+**MovieMaster Pro** is a comprehensive movie management platform where users can browse, filter, and organize their favorite movies. It features advanced filtering, personal collections, watchlist functionality, smooth animations, and theme toggling for a modern and interactive experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Dynamic Movie Browsing:** View all movies with filtering by genres and rating range.
+- **Watchlist & Personal Collection:** Add movies to your watchlist or personal collection and manage them efficiently.
+- **User Authentication:** Secure login and registration using Firebase, including Google Sign-In.
+- **Animations & Interactivity:** Engaging animations with **Framer Motion** and **Lottie**, plus smooth carousel with **Swiper.js**.
+- **Form Validation & Notifications:** Password validation using **Zod** and toast notifications for all actions using **React Hot Toast** and **Sweet Alert**.
+- **Theme Toggle:** Switch between dark and light themes for the full application.
+- **Error Handling:** Custom 404 page and React error boundaries for improved UX.
+- **Responsive Design:** Fully responsive on mobile, tablet, and desktop devices.
+
+---
+
+## Technologies Used
+
+- **Frontend:** React.js, React Router, Tailwind CSS, DaisyUI
+- **Backend:** Node.js, Express.js, MongoDB (Native Driver)
+- **Animations & UI:** Framer Motion, Lottie, Swiper.js
+- **Authentication & Hosting:** Firebase Auth, Netlify (client), Vercel (server)
+- **Notifications:** React Hot Toast, Sweet Alert
+- **Icons:** React Icons
+- **Validation:** Zod for password validation
+
+---
+
+## Demo
+
+**Live URL:** [Your Live Site URL Here](#)

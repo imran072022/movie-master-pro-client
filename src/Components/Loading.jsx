@@ -4,7 +4,10 @@ import loader from "../assets/lotties/loading.json";
 
 const Loading = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#111A2B]">
+    <div
+      className="flex justify-center items-center min-h-screen bg-[#111A2B] dark:bg-[radial-gradient(circle_at_center,_#ffffff_0%,_#f8f4ff_60%,_#f0e8ff_100%)]
+"
+    >
       <Lottie
         animationData={loader}
         loop={true}

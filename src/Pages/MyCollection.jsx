@@ -56,7 +56,7 @@ const MyCollection = () => {
     });
   };
   return (
-    <div className="max-w-7xl mx-auto py-12 md:py-24">
+    <div className="max-w-7xl mx-auto py-28 md:py-40">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
              text-white dark:text-black animate-fadeInSlide roboto"

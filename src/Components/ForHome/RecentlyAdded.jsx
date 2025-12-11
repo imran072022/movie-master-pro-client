@@ -13,7 +13,7 @@ const RecentlyAdded = () => {
       });
   }, []);
   return (
-    <div className="py-12">
+    <div className="py-12 px-2.5">
       <h2
         className="text-center text-4xl md:text-5xl font-bold mb-12
              text-white dark:text-black animate-fadeInSlide"

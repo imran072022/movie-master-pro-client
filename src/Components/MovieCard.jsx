@@ -29,13 +29,13 @@ const MovieCard = ({
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="w-[210px] bg-[#1A1A1A] dark:bg-white border border-[#2a2c3a] dark:border-gray-400 rounded-xl overflow-hidden flex flex-col">
+    <div className="w-full sm:w-[210px] bg-[#1A1A1A] dark:bg-white border border-[#2a2c3a] dark:border-gray-400 rounded-xl overflow-hidden flex flex-col">
       {/* Poster */}
       <div className="relative overflow-hidden">
         <img
           src={posterUrl}
           alt={title}
-          className="w-[210px] h-[290px] object-cover  transition-transform duration-300 ease-out hover:scale-105"
+          className="w-full h-[220px] sm:w-[210px] sm:h-[290px] object-cover  transition-transform duration-300 ease-out hover:scale-105"
         />
 
         <span className="absolute top-2 right-2 bg-black/70 text-yellow-400 text-sm font-semibold px-2 py-1 rounded-md">

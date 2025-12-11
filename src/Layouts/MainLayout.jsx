@@ -2,15 +2,17 @@ import React from "react";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import { Outlet } from "react-router";
+import ScrollToTop from "../Components/ScrollToTop";
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-black dark:bg-white text-white dark:text-black  transition-colors duration-300">
+    <div>
       <header>
         <nav>
           <Navbar></Navbar>
         </nav>
       </header>
+      <ScrollToTop></ScrollToTop>
       <main className="flex-1">
         <Outlet></Outlet>
       </main>

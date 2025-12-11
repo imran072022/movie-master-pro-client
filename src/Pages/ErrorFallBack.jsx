@@ -7,7 +7,11 @@ const ErrorFallBack = () => {
   const error = useRouteError();
   console.error("ErrorBoundary caught an error:", error);
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-100 via-pink-50 to-white px-4">
+    <div
+      className="min-h-screen flex items-center justify-center px-4 
+                dark:bg-gradient-to-br dark:from-purple-100 dark:via-pink-50 dark:to-white 
+                bg-gradient-to-br from-gray-900 via-gray-800 to-black"
+    >
       <title>Something is wrong!</title>
       {/* Center glow container */}
       <motion.div
@@ -25,14 +29,14 @@ const ErrorFallBack = () => {
 
         {/* Description text */}
         <motion.h2
-          className="text-gray-900  font-medium"
+          className="text-gray-200 dark:text-gray-900 font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
           Oops! Something went wrong.
         </motion.h2>
-        <p className=" text-gray-600 mb-4">
+        <p className=" text-red-400 mb-4">
           {error?.statusText || error?.message || "Unknown error occurred."}
         </p>
 

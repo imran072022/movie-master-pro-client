@@ -9,6 +9,7 @@ import {
 import React, { createContext, useEffect, useState } from "react";
 import { app } from "../Firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
+import toast from "react-hot-toast";
 
 export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
@@ -23,7 +24,9 @@ const AuthProvider = ({ children }) => {
 
   /*Sign Out */
   const logOut = () => {
-    return signOut(auth);
+    return signOut(auth)
+      .then(() => toast.success("Logged out successfully"))
+      .catch((error) => toast.error(error.message));
   };
   /*Sign In */
   const login = (email, password) => {

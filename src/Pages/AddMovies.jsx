@@ -34,7 +34,7 @@ const AddMovie = () => {
       body: JSON.stringify(newMovie),
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then(() => {
         toast.success("Movie successfully added!");
       });
   };
@@ -53,31 +53,26 @@ const AddMovie = () => {
   ];
 
   return (
-    <div
-      className="
-      relative min-h-screen flex justify-center items-center p-4 overflow-hidden py-14 md:py-24
-      
-      /* DARK MODE (default) */
-      bg-[radial-gradient(circle_at_center,_#25163b_0%,_#1a1a2e_60%,_#000000_100%)]
+    <div className="relative min-h-screen flex justify-center items-center p-4 overflow-hidden py-28 md:py-40">
+      {/* Background gradients behind form */}
+      <div
+        className="absolute inset-0 z-0
+        bg-[radial-gradient(circle_at_center,_#25163b_0%,_#1a1a2e_60%,_#000000_100%)]
+        dark:bg-[radial-gradient(circle_at_center,_#ffffff_0%,_#f8f4ff_60%,_#f0e8ff_100%)]
+        dark:before:absolute dark:before:inset-0 
+        dark:before:bg-[radial-gradient(circle_at_50%_50%,_rgba(214,90,255,0.08)_0%,_transparent_70%)]
+        dark:before:pointer-events-none
+      "
+      ></div>
 
-      /* LIGHT MODE - Premium gradient with subtle purple glow */
-      dark:bg-[radial-gradient(circle_at_center,_#ffffff_0%,_#f8f4ff_60%,_#f0e8ff_100%)]
-      dark:before:absolute dark:before:inset-0 
-      dark:before:bg-[radial-gradient(circle_at_50%_50%,_rgba(214,90,255,0.08)_0%,_transparent_70%)]
-      dark:before:pointer-events-none
-    "
-    >
+      {/* Form */}
       <motion.form
         onSubmit={handleSubmit}
         className="
-          relative w-full max-w-2xl p-8 rounded-2xl shadow-lg shadow-black/50
-
-          /* DARK MODE */
+          relative z-10 w-full max-w-2xl p-8 rounded-2xl shadow-lg shadow-black/50
           bg-[linear-gradient(180deg,_#1e1e2e,_#1a1a28)]
           border border-[#333]
           text-[#eee]
-
-          /* LIGHT MODE - Premium glass-like effect */
           dark:bg-[linear-gradient(180deg,_rgba(255,255,255,0.95)_0%,_rgba(248,244,255,0.98)_100%)]
           dark:border-[#e6deff]
           dark:text-[#2a2a3c]
@@ -90,7 +85,7 @@ const AddMovie = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Decorative elements for light mode */}
+        {/* Decorative top bar */}
         <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl bg-gradient-to-r from-transparent via-[#d65aff] to-transparent dark:via-purple-400/80"></div>
 
         <h2 className="text-3xl font-bold text-center mb-6 text-[#eee] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-purple-700 dark:to-pink-600">
@@ -114,18 +109,12 @@ const AddMovie = () => {
               transition={{ duration: 0.2 }}
               className="
                 w-full p-3 rounded
-
-                /* DARK */
                 bg-[#222] border border-[#333] text-[#eee] placeholder-[#aaa]
-
-                /* LIGHT MODE - Only color changes */
                 dark:bg-white/80
                 dark:border-[#e0d6ff]
                 dark:text-[#3a3a4c]
                 dark:placeholder-[#a0a0c0]
                 dark:shadow-sm
-
-                /* Common focus styles (unchanged) */
                 focus:border-[#d65aff] focus:shadow-[0_0_8px_#d65aff55] focus:outline-none
               "
             />
@@ -143,24 +132,18 @@ const AddMovie = () => {
             rows={4}
             className="
               w-full p-3 rounded
-
-              /* DARK */
               bg-[#222] border border-[#333] text-[#eee] placeholder-[#aaa]
-
-              /* LIGHT MODE - Only color changes */
               dark:bg-white/80
               dark:border-[#e0d6ff]
               dark:text-[#3a3a4c]
               dark:placeholder-[#a0a0c0]
               dark:shadow-sm
-
-              /* Common focus styles (unchanged) */
               focus:border-[#d65aff] focus:shadow-[0_0_8px_#d65aff55] focus:outline-none
             "
           />
         </div>
 
-        {/* Featured - Fixed text cut issue */}
+        {/* Featured */}
         <div className="mb-4">
           <label className="block text-[#ccc] mb-1 dark:text-[#5a5568] dark:font-medium">
             Featured
@@ -169,18 +152,12 @@ const AddMovie = () => {
             name="featured"
             className="
               w-full p-3 rounded
-
-              /* DARK */
               bg-[#222] border border-[#333] text-[#eee]
-
-              /* LIGHT MODE - Only color changes with proper text display */
               dark:bg-white/80
               dark:border-[#e0d6ff]
               dark:text-[#3a3a4c]
               dark:shadow-sm
-              dark:pr-10 /* Add padding for better text display */
-
-              /* Common focus styles (unchanged) */
+              dark:pr-10
               focus:border-[#d65aff] focus:shadow-[0_0_8px_#d65aff55] focus:outline-none
             "
           >
@@ -193,7 +170,7 @@ const AddMovie = () => {
           </select>
         </div>
 
-        {/* Submit Button (unchanged) */}
+        {/* Submit Button */}
         <motion.button
           type="submit"
           className="w-full p-3 mt-4 rounded text-white font-bold text-lg btn-gradient-animate cursor-pointer"

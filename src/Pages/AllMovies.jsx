@@ -101,7 +101,7 @@ const AllMovies = () => {
   if (loading) return <Loading />;
 
   return (
-    <div className="max-w-7xl mx-auto py-12 md:py-24">
+    <div className="max-w-7xl mx-auto py-28 md:py-40">
       <h2 className="text-center text-4xl md:text-5xl font-bold mb-12 text-white dark:text-black animate-fadeInSlide roboto">
         <span>Browse </span>
         <span className="text-[#d65aff] "> Movies</span>
@@ -113,7 +113,7 @@ const AllMovies = () => {
         <div ref={dropdownRef} className="relative">
           <button
             onClick={() => setDropdownOpen((prev) => !prev)}
-            className="bg-[#222] cursor-pointer text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-[#333]"
+            className="bg-[#222] dark:bg-[rgba(0,0,0,0.10)] cursor-pointer text-white dark:text-black px-4 py-2 rounded flex items-center gap-2 hover:bg-[#333] hover:dark:bg-[rgba(0,0,0,0.15)]"
           >
             Genres <span className="ml-1">&#9662;</span>
           </button>
