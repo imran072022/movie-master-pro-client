@@ -2,10 +2,11 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
+import Loading from "../Components/Loading";
 
 const AddMovie = () => {
   const { user } = useContext(AuthContext);
-
+  const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -25,8 +26,8 @@ const AddMovie = () => {
       addedBy: user.email,
       createdAt: new Date(),
     };
-
-    fetch("http://localhost:3000/movies/add", {
+    setLoading(true);
+    fetch("https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/add", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -35,6 +36,7 @@ const AddMovie = () => {
     })
       .then((res) => res.json())
       .then(() => {
+        setLoading(false);
         toast.success("Movie successfully added!");
       });
   };
@@ -51,7 +53,7 @@ const AddMovie = () => {
     { name: "language", label: "Language", type: "text" },
     { name: "country", label: "Country", type: "text" },
   ];
-
+  if (loading) return <Loading></Loading>;
   return (
     <div className="relative min-h-screen flex justify-center items-center p-4 overflow-hidden py-28 md:py-40">
       {/* Background gradients behind form */}
@@ -173,12 +175,42 @@ const AddMovie = () => {
         {/* Submit Button */}
         <motion.button
           type="submit"
-          className="w-full p-3 mt-4 rounded text-white font-bold text-lg btn-gradient-animate cursor-pointer"
-          whileHover={{ scale: 1.03, boxShadow: "0 0 12px #d65aff55" }}
-          whileTap={{ scale: 0.98 }}
+          disabled={loading}
+          className={`w-full p-3 mt-4 rounded text-white font-bold text-lg btn-gradient-animate cursor-pointer ${
+            loading ? "opacity-60 cursor-not-allowed" : ""
+          }`}
+          whileHover={{
+            scale: loading ? 1 : 1.03,
+            boxShadow: loading ? "none" : "0 0 12px #d65aff55",
+          }}
+          whileTap={{ scale: loading ? 1 : 0.98 }}
           transition={{ duration: 0.2 }}
         >
-          Add Movie
+          {loading ? (
+            <span className="flex items-center justify-center gap-2">
+              <svg
+                className="animate-spin h-5 w-5 text-white"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                ></path>
+              </svg>
+              Submitting...
+            </span>
+          ) : (
+            "Add Movie"
+          )}
         </motion.button>
       </motion.form>
     </div>

@@ -9,7 +9,7 @@ import UpdateMovie from "../Pages/UpdateMovie";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
-import WatchList from "../Pages/Watchlist";
+import WatchList from "../Pages/WatchList";
 import Page404 from "../Pages/Page404";
 import ErrorFallback from "../Pages/ErrorFallBack";
 const router = createBrowserRouter([
@@ -47,7 +47,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/movie/${params.id}`),
+          fetch(
+            `https://movie-master-pro-server-p31s3i7uw.vercel.app/movie/${params.id}`
+          ),
       },
       {
         path: "movies/update/:id",

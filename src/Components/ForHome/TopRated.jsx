@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MovieCard from "../MovieCard";
 import useWatchlist from "../../hooks/useWatchlist";
-import MovieCardSkeleton from "../MovieCardSkeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const TopRated = () => {
@@ -9,7 +8,9 @@ const TopRated = () => {
   const [loading, setLoading] = useState(true);
   const { handleWatchList } = useWatchlist();
   useEffect(() => {
-    fetch("http://localhost:3000/movies/top-rated")
+    fetch(
+      "https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/top-rated"
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -21,7 +21,7 @@ const AllMovies = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:3000/movies/filter${filterQuery}`
+        `https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/filter${filterQuery}`
       );
       const data = await response.json();
       setMovies(data);
@@ -38,7 +38,9 @@ const AllMovies = () => {
   useEffect(() => {
     const fetchGenres = async () => {
       try {
-        const response = await fetch("http://localhost:3000/movies/genres");
+        const response = await fetch(
+          "https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/genres"
+        );
         const data = await response.json();
         setGenres(data);
       } catch (error) {

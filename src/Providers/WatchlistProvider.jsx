@@ -15,7 +15,9 @@ export const WatchlistProvider = ({ children }) => {
       return;
     }
 
-    fetch(`http://localhost:3000/movies/watchlist?email=${user.email}`)
+    fetch(
+      `https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/watchlist?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         if (mounted) setEntries(data || []);
@@ -37,11 +39,14 @@ export const WatchlistProvider = ({ children }) => {
     }
 
     const payload = { movieId, email: user.email, addedAt: new Date() };
-    return fetch("http://localhost:3000/movies/watchlist", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(payload),
-    })
+    return fetch(
+      "https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/watchlist",
+      {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(payload),
+      }
+    )
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
@@ -85,9 +90,12 @@ export const WatchlistProvider = ({ children }) => {
     const entry = entries.find((e) => String(e.movieId) === String(movieId));
     if (!entry) return Promise.resolve();
     const id = entry._id;
-    return fetch(`http://localhost:3000/movies/watchlist/${id}`, {
-      method: "DELETE",
-    })
+    return fetch(
+      `https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/watchlist/${id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();

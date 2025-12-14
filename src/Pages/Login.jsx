@@ -145,7 +145,7 @@ const Login = () => {
           onClick={handleGoogleSignIn}
           className="w-full py-2 bg-[#2c2c3a] text-[#eee] rounded-lg border border-gray-600 hover:bg-[#3a3a4f] 
                  dark:bg-gray-100 dark:text-black dark:border-gray-300 dark:hover:bg-gray-200 
-                 font-bold transition flex items-center justify-center gap-2"
+                 font-bold transition flex items-center justify-center gap-2 cursor-pointer"
         >
           <FcGoogle className="w-6 h-6" /> Continue with Google
         </button>

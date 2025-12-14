@@ -25,7 +25,7 @@ const WatchList = () => {
         entries.map(async (entry) => {
           try {
             const r = await fetch(
-              `http://localhost:3000/movie/${entry.movieId}`
+              `https://movie-master-pro-server-p31s3i7uw.vercel.app/movie/${entry.movieId}`
             );
             if (!r.ok) return null;
             const movie = await r.json();

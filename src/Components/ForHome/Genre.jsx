@@ -23,7 +23,7 @@ const GenreCarousel = () => {
   const [genres, setGenres] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/movies/genres")
+    fetch("https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/genres")
       .then((res) => res.json())
       .then((data) => setGenres(data))
       .catch((err) => console.error(err));

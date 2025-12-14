@@ -11,7 +11,7 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:3000/movies")
+    fetch("https://movie-master-pro-server-p31s3i7uw.vercel.app/movies")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

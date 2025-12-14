@@ -6,7 +6,7 @@ const RecentlyAdded = () => {
   const [movies, setMovies] = useState([]);
   const { handleWatchList } = useWatchlist();
   useEffect(() => {
-    fetch("http://localhost:3000/movies/latest")
+    fetch("https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/latest")
       .then((res) => res.json())
       .then((data) => {
         setMovies(data);

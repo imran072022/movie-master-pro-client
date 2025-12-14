@@ -46,13 +46,13 @@ const MovieCard = ({
           <div className="absolute top-2 left-2 flex gap-2">
             <button
               onClick={() => handleEdit(_id)}
-              className="bg-purple-600 text-white px-2 py-1 rounded text-xs shadow-md backdrop-blur-sm hover:bg-purple-700 transition-all"
+              className="bg-purple-600 text-white px-2 cursor-pointer py-1 rounded text-xs shadow-md backdrop-blur-sm hover:bg-purple-700 transition-all"
             >
               Edit
             </button>
             <button
               onClick={() => handleDelete(_id)}
-              className="bg-red-600 text-white px-2 py-1 rounded text-xs shadow-md backdrop-blur-sm hover:bg-red-700 transition-all"
+              className="bg-red-600 text-white px-2 py-1 cursor-pointer rounded text-xs shadow-md backdrop-blur-sm hover:bg-red-700 transition-all"
             >
               Delete
             </button>

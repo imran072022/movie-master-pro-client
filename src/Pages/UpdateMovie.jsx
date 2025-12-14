@@ -15,7 +15,7 @@ const UpdateMovie = () => {
 
   useEffect(() => {
     if (!movieFromState) {
-      fetch(`http://localhost:3000/movie/${id}`)
+      fetch(`https://movie-master-pro-server-p31s3i7uw.vercel.app/movie/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setMovie(data);
@@ -45,11 +45,14 @@ const UpdateMovie = () => {
       addedBy: movie.addedBy,
     };
 
-    fetch(`http://localhost:3000/movies/update/${movie._id}`, {
-      method: "PATCH",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(updatedMovie),
-    })
+    fetch(
+      `https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/update/${movie._id}`,
+      {
+        method: "PATCH",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(updatedMovie),
+      }
+    )
       .then((res) => res.json())
       .then(() => toast.success("Movie updated successfully!"));
   };

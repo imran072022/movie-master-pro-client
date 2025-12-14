@@ -4,19 +4,24 @@ import MovieCard from "../Components/MovieCard";
 import useWatchlist from "../hooks/useWatchlist";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
+import Loading from "../Components/Loading";
 
 const MyCollection = () => {
   const { user } = useContext(AuthContext);
   const [movies, setMovies] = useState([]);
   const { handleWatchList } = useWatchlist();
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:3000/movies/my-collection?addedBy=${user.email}`)
+      fetch(
+        `https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/my-collection?addedBy=${user.email}`
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
           setMovies(data);
+          setLoading(false);
         })
         .catch((error) => console.log(error));
     }
@@ -37,13 +42,17 @@ const MyCollection = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/movies/my-collection/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://movie-master-pro-server-p31s3i7uw.vercel.app/movies/my-collection/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount === 1) {
               setMovies((prev) => prev.filter((movie) => movie._id !== id));
+
               Swal.fire({
                 title: "Deleted!",
                 text: "Your file has been deleted.",
@@ -55,6 +64,7 @@ const MyCollection = () => {
       }
     });
   };
+  if (loading) return <Loading></Loading>;
   return (
     <div className="max-w-7xl mx-auto py-28 md:py-40">
       <h2
