@@ -74,7 +74,7 @@ const MyCollection = () => {
         <span>Your </span>
         <span className="text-[#d65aff] "> Collection</span>
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 px-2.5">
         {movies.length > 0 ? (
           movies.map((movie) => (
             <MovieCard

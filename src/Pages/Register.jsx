@@ -87,12 +87,12 @@ const Register = () => {
   /*Dot animation in register button*/
   useEffect(() => {
     if (!loading) {
-      setDots("");
-      return;
+      const timeout = setTimeout(() => setDots(""), 0);
+      return () => clearTimeout(timeout);
     }
     const interval = setInterval(() => {
       setDots((prev) => (prev.length < 3 ? prev + "." : ""));
-    }, 300);
+    }, 350);
     return () => clearInterval(interval);
   }, [loading]);
 
@@ -191,7 +191,7 @@ const Register = () => {
           </div>
 
           {/* Zod / Firebase Errors */}
-          <div>
+          <div className="mt-1">
             {password.length > 0 &&
               zodErrors.map((message, index) => (
                 <p key={index} className="text-red-500 text-xs">

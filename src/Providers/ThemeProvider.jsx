@@ -1,5 +1,4 @@
 import React, { createContext, useEffect, useState } from "react";
-
 export const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
@@ -16,12 +15,10 @@ const ThemeProvider = ({ children }) => {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
-
   const toggleTheme = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return <ThemeContext value={{ theme, toggleTheme }}>{children}</ThemeContext>;
 };
-
 export default ThemeProvider;

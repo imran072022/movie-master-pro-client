@@ -73,7 +73,7 @@ const UpdateMovie = () => {
   return (
     <div
       className="
-        relative min-h-screen flex justify-center items-center p-4 overflow-hidden py-28 md:py-40
+        relative min-h-screen flex justify-center items-center p-3 overflow-hidden py-28 md:py-40
         
         /* DARK MODE */
         bg-[radial-gradient(circle_at_center,_#25163b_0%,_#1a1a2e_60%,_#000000_100%)]

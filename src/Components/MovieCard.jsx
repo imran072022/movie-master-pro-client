@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import useWatchlist from "../hooks/useWatchlist";
 import { AuthContext } from "../Providers/AuthProvider";
@@ -38,21 +38,21 @@ const MovieCard = ({
           className="w-full h-[220px] sm:w-[210px] sm:h-[290px] object-cover  transition-transform duration-300 ease-out hover:scale-105"
         />
 
-        <span className="absolute top-2 right-2 bg-black/70 text-yellow-400 text-sm font-semibold px-2 py-1 rounded-md">
+        <span className="absolute top-2 right-2 bg-black/70 text-yellow-400 text-xs sm:text-sm font-semibold px-1.5 sm:px-2 py-1 rounded-md">
           ⭐ {rating}
         </span>
 
         {showActions && (
-          <div className="absolute top-2 left-2 flex gap-2">
+          <div className="absolute top-2 left-2 flex gap-1 sm:gap-2">
             <button
               onClick={() => handleEdit(_id)}
-              className="bg-purple-600 text-white px-2 cursor-pointer py-1 rounded text-xs shadow-md backdrop-blur-sm hover:bg-purple-700 transition-all"
+              className="bg-purple-600 text-white px-1.5 sm:px-2 cursor-pointer py-1 rounded text-xs shadow-md backdrop-blur-sm hover:bg-purple-700 transition-all"
             >
               Edit
             </button>
             <button
               onClick={() => handleDelete(_id)}
-              className="bg-red-600 text-white px-2 py-1 cursor-pointer rounded text-xs shadow-md backdrop-blur-sm hover:bg-red-700 transition-all"
+              className="bg-red-600 text-white px-1.5 sm:px-2 py-1 cursor-pointer rounded text-xs shadow-md backdrop-blur-sm hover:bg-red-700 transition-all"
             >
               Delete
             </button>
@@ -78,7 +78,12 @@ const MovieCard = ({
           <button
             onClick={() => {
               if (!user?.email) {
-                navigate("/login");
+                navigate("/login", {
+                  state: {
+                    message: "Log in first to add movies to your watchlist",
+                  },
+                });
+
                 return;
               }
               handle(_id);
@@ -92,7 +97,7 @@ const MovieCard = ({
               </>
             ) : (
               <>
-                <AiOutlineHeart className="text-gray-200" size={24} />
+                <AiOutlineHeart className="text-gray-200 " size={24} />
                 Watchlist
               </>
             )}

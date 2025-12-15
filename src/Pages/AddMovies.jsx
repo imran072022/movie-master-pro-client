@@ -55,7 +55,7 @@ const AddMovie = () => {
   ];
   if (loading) return <Loading></Loading>;
   return (
-    <div className="relative min-h-screen flex justify-center items-center p-4 overflow-hidden py-28 md:py-40">
+    <div className="relative min-h-screen flex justify-center items-center px-2.5 overflow-hidden py-28 md:py-40">
       {/* Background gradients behind form */}
       <div
         className="absolute inset-0 z-0

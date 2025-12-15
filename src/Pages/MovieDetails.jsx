@@ -59,7 +59,7 @@ const MovieDetails = () => {
 
   return (
     <div className="py-28 text-white">
-      <div className="p-6 max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
+      <div className=" px-4 max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
         {/* Poster */}
         <div className="flex-shrink-0 w-full lg:w-[300px] rounded-xl overflow-hidden shadow-lg">
           <img

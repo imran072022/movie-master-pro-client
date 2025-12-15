@@ -103,21 +103,21 @@ const AllMovies = () => {
   if (loading) return <Loading />;
 
   return (
-    <div className="max-w-7xl mx-auto py-28 md:py-40">
+    <div className="max-w-7xl mx-auto py-28 md:py-40 ">
       <h2 className="text-center text-4xl md:text-5xl font-bold mb-12 text-white dark:text-black animate-fadeInSlide roboto">
         <span>Browse </span>
         <span className="text-[#d65aff] "> Movies</span>
       </h2>
 
       {/* Filters */}
-      <div className="mb-6 flex flex-col md:flex-row gap-4 items-center justify-center relative z-10">
+      <div className="mb-6 flex  md:flex-row gap-2 md:gap-4 items-center justify-center relative z-10 text-sm md:text-base ">
         {/* Genre Dropdown */}
         <div ref={dropdownRef} className="relative">
           <button
             onClick={() => setDropdownOpen((prev) => !prev)}
-            className="bg-[#222] dark:bg-[rgba(0,0,0,0.10)] cursor-pointer text-white dark:text-black px-4 py-2 rounded flex items-center gap-2 hover:bg-[#333] hover:dark:bg-[rgba(0,0,0,0.15)]"
+            className="bg-[#222] dark:bg-[rgba(0,0,0,0.10)] text-[12px] sm:text-base cursor-pointer text-white dark:text-black px-2 md:px-4 py-1 md:py-2 rounded flex items-center gap-1 sm:gap-2 hover:bg-[#333] hover:dark:bg-[rgba(0,0,0,0.15)]"
           >
-            Genres <span className="ml-1">&#9662;</span>
+            Genres <span className="sm:ml-1">&#9662;</span>
           </button>
 
           {dropdownOpen && (
@@ -141,7 +141,7 @@ const AllMovies = () => {
         </div>
 
         {/* Rating Inputs */}
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-1 sm:gap-2 text-sm sm:text-base items-center ">
           <input
             type="number"
             min={0}
@@ -150,7 +150,7 @@ const AllMovies = () => {
             placeholder="Min Rating"
             value={minRating}
             onChange={(e) => setMinRating(e.target.value)}
-            className="p-2 rounded w-28  text-white dark:text-black placeholder-gray-300 dark:placeholder-gray-600"
+            className="p-1 sm:p-2 rounded w-22 sm:w-28 text-center text-[12px] sm:text-base text-white dark:text-black placeholder-gray-300 dark:placeholder-gray-600"
           />
           <input
             type="number"
@@ -160,7 +160,7 @@ const AllMovies = () => {
             placeholder="Max Rating"
             value={maxRating}
             onChange={(e) => setMaxRating(e.target.value)}
-            className="p-2 rounded w-28  text-white dark:text-black placeholder-gray-300 dark:placeholder-gray-600"
+            className="p-1 sm:p-2 rounded w-22 sm:w-28 text-center text-[12px] sm:text-base text-white dark:text-black placeholder-gray-300 dark:placeholder-gray-600"
           />
         </div>
 
@@ -168,7 +168,7 @@ const AllMovies = () => {
         <button
           onClick={handleFilter}
           className=" 
-                  px-5 py-2 rounded-xl font-semibold text-white
+                 px-2 md:px-5 py-1.5 md:py-2 rounded-xl text-[12px] sm:text-base font-normal md:font-semibold text-white
                   transition-all cursor-pointer btn-gradient-animate2
                 "
         >
@@ -177,7 +177,7 @@ const AllMovies = () => {
       </div>
 
       {/* Movies Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 relative z-0">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 relative z-0 px-2.5">
         {movies.map((movie) => (
           <MovieCard
             key={movie._id}

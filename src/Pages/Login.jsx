@@ -13,6 +13,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const location = useLocation();
+  const message = location.state?.message;
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -21,7 +22,7 @@ const Login = () => {
     const password = e.target.password.value;
     setLoading(true);
     login(email, password)
-      .then((userCredential) => {
+      .then(() => {
         setLoading(false);
         toast.success("Logged in successfully!");
         navigate(location.state?.from || "/", { replace: true });
@@ -39,7 +40,7 @@ const Login = () => {
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
-      .then((userCredential) => {
+      .then(() => {
         toast.success("Logged in successfully");
         navigate(location.state?.from || "/", { replace: true });
       })
@@ -48,8 +49,8 @@ const Login = () => {
 
   useEffect(() => {
     if (!loading) {
-      setDots("");
-      return;
+      const timeout = setTimeout(() => setDots(""), 0);
+      return () => clearTimeout(timeout);
     }
     const interval = setInterval(() => {
       setDots((prev) => (prev.length < 3 ? prev + "." : ""));
@@ -67,6 +68,15 @@ const Login = () => {
         className="w-full max-w-md rounded-2xl shadow-2xl p-8
                   bg-[#1a1a2e] dark:bg-white"
       >
+        {message && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-4 p-2 bg-yellow-400 text-black rounded-md text-center font-semibold"
+          >
+            {message}
+          </motion.div>
+        )}
         <h2
           className="text-3xl font-bold text-[#d65aff] text-center mb-6
                    dark:text-[#d351ff]"
